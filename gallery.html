@@ -4,19 +4,127 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <title>Perk Up Cafe</title>
+    <title>Gallery | Perk Up Cafe</title>
 </head>
 <body>
+
+    <!-- Navigation Bar -->
     <header>
         <nav>
-            <ul>
-                <li><a href="index.html">HOME</a></li>
-                <li><a href="products.html">PRODUCTS</a></li>
-                <li><a href="gallery.html">GALLERY</a></li>
-                <li><a href="about.html">ABOUT US</a></li>
-                <li><a href="contact.html">CONTACT US</a></li>
-            </ul>
+            <div class="menu-icon">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+
+            <div class="nav">
+                <ul>
+                    <li><a href="index.html">HOME</a></li>
+                    <li><a href="products.html">PRODUCTS</a></li>
+                    <li><a href="gallery.html" class="active">GALLERY</a></li>
+                    <li><a href="about.html">ABOUT US</a></li>
+                    <li><a href="contact.html">CONTACT US</a></li>
+                </ul>
+            </div>
         </nav>
     </header>
+
+    <!-- Sidebar -->
+    <aside class="sidebar"></aside>
+
+    <!-- Main Content -->
+    <main>
+
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="hero-top"></div>
+            <div class="hero-image"></div>
+            <div class="logo">
+                <a href="index.html">
+                    <img src="assets/PerkUpCafe-Logo.jpg" alt="Perk Up Cafe Logo">
+                </a>
+            </div>
+        </section>
+
+        <!-- Gallery Section -->
+        <section class="gallery-section">
+            <h2>Our Photo Gallery</h2>
+
+            <div class="gallery-grid">
+
+                <figure class="gallery-card">
+                    <img src="images/gallery-storefront.jpg" alt="Storefront Exterior">
+                    <figcaption>
+                        <h3>Cafe Exterior</h3>
+                        <p>Our welcoming storefront located in Jaro, Iloilo City.</p>
+                    </figcaption>
+                </figure>
+
+                <figure class="gallery-card">
+                    <img src="images/gallery-interior.jpg" alt="Cozy Dining Area">
+                    <figcaption>
+                        <h3>Cozy Interior</h3>
+                        <p>Warm seating designed for study sessions and catch-ups.</p>
+                    </figcaption>
+                </figure>
+
+                <figure class="gallery-card">
+                    <img src="images/gallery-espresso.jpg" alt="Barista Preparing Espresso">
+                    <figcaption>
+                        <h3>Barista Craft</h3>
+                        <p>Freshly pulled espresso shots crafted daily with care.</p>
+                    </figcaption>
+                </figure>
+
+                <figure class="gallery-card">
+                    <img src="images/gallery-latte-art.jpg" alt="Signature Latte Art">
+                    <figcaption>
+                        <h3>Signature Drinks</h3>
+                        <p>Handcrafted hot lattes poured with detail.</p>
+                    </figcaption>
+                </figure>
+
+                <figure class="gallery-card">
+                    <img src="images/gallery-pastries.jpg" alt="Fresh Pastries Display">
+                    <figcaption>
+                        <h3>Fresh Pastries</h3>
+                        <p>Delicious local baked goods paired with your coffee.</p>
+                    </figcaption>
+                </figure>
+
+                <figure class="gallery-card">
+                    <img src="images/gallery-brewing.jpg" alt="Coffee Machine Equipment">
+                    <figcaption>
+                        <h3>Brewing Gear</h3>
+                        <p>Quality equipment ensuring every brew is consistent.</p>
+                    </figcaption>
+                </figure>
+
+                <figure class="gallery-card">
+                    <img src="images/gallery-iced-coffee.jpg" alt="Iced Coffee Series">
+                    <figcaption>
+                        <h3>Iced Favorites</h3>
+                        <p>Refreshing cold brews to beat the Iloilo afternoon heat.</p>
+                    </figcaption>
+                </figure>
+
+                <figure class="gallery-card">
+                    <img src="images/gallery-community.jpg" alt="Customers Enjoying Cafe">
+                    <figcaption>
+                        <h3>Community Moments</h3>
+                        <p>Students and coffee lovers sharing moments at Perk Up.</p>
+                    </figcaption>
+                </figure>
+
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2026 Perk Up Cafe. All Rights Reserved.</p>
+    </footer>
+
 </body>
 </html>
