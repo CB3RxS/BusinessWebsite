@@ -334,6 +334,137 @@ main {
 
 }
 
+/* =========================
+   ABOUT US PAGE
+   ========================= */
+
+.about-section {
+    padding: 58px 34px 30px;
+    background-color: #fffbed;
+}
+
+.about-section h2 {
+    font-size: 27px;
+    margin-bottom: 24px;
+    color: #174f45;
+}
+
+/* Two-column layout for integrated image and story text */
+.about-content {
+    display: flex;
+    gap: 40px;
+    align-items: flex-start;
+}
+
+.about-image {
+    flex: 1;
+    min-width: 300px;
+}
+
+.about-image img {
+    width: 100%;
+    height: 380px;
+    object-fit: cover;
+    background-color: #d2b386;
+    border-radius: 4px;
+    display: block;
+}
+
+.about-text {
+    flex: 1.5;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.about-text p {
+    font-size: 17px;
+    line-height: 1.6;
+    color: #174f45;
+}
+
+
+/* Mission, Vision, Values Grid */
+
+.mvv-section {
+    border-top: 2px solid #aaa;
+    padding: 38px 34px 50px;
+    background-color: #fffbed;
+}
+
+.mvv-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.mvv-card {
+    background-color: #d2b386;
+    padding: 28px 22px;
+    color: #174f45;
+    border-radius: 4px;
+}
+
+.mvv-card h3 {
+    font-size: 22px;
+    margin-bottom: 12px;
+    color: #174f45;
+}
+
+.mvv-card p {
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+
+/* Footer Styling */
+
+footer {
+    background-color: #d2b386;
+    text-align: center;
+    padding: 18px 20px;
+    margin-left: 69px;
+    color: #174f45;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+
+/* =========================
+   ABOUT PAGE RESPONSIVENESS
+   ========================= */
+
+@media (max-width: 900px) {
+
+    .about-content {
+        flex-direction: column;
+    }
+
+    .about-image img {
+        height: 280px;
+    }
+
+    .mvv-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+}
+
+@media (max-width: 600px) {
+
+    footer {
+        margin-left: 0;
+    }
+
+    .about-section,
+    .mvv-section {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+}
+
 
 @media (max-width: 600px) {
 
