@@ -124,37 +124,23 @@ main {
 
 .hero {
     height: 337px;
-
     position: relative;
-
     background-color: #fffbed;
     overflow: hidden;
 }
 
-
-/* Cream-colored upper part */
-
-.hero-top {
-    height: 126px;
+.hero-image {
+    height: 100%;
     width: 100%;
-
-    background-color: #fffbed;
+    position: relative;
 }
 
-
-/* Blue sky */
-
-.hero-image {
-    height: 211px;
+.hero-image img {
+    height: 100%;
     width: 100%;
-
-    background: linear-gradient(
-        to bottom,
-        #cceefa,
-        #e5f8fc
-    );
-
-    position: relative;
+    object-fit: cover;
+    object-position: center;
+    display: block;
 }
 
 /* Logo */
@@ -366,14 +352,6 @@ main {
 
     .hero {
         height: 280px;
-    }
-
-    .hero-top {
-        height: 105px;
-    }
-
-    .hero-image {
-        height: 175px;
     }
 
     .logo {
