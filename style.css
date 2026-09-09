@@ -638,3 +638,118 @@ footer {
     }
 
 }
+
+/* =========================
+   PRODUCTS / MENU PAGE
+   ========================= */
+
+.product-desc {
+    font-size: 14px;
+    color: #174f45;
+    margin-top: 6px;
+    opacity: 0.85;
+}
+
+/* Menu Section Container */
+.menu-tables-section {
+    border-top: 2px solid #aaa;
+    padding: 38px 34px 50px;
+    background-color: #fffbed;
+}
+
+.menu-tables-section h2 {
+    font-size: 27px;
+    margin-bottom: 24px;
+    color: #174f45;
+}
+
+/* Two-column Menu Layout */
+.menu-grid {
+    display: flex;
+    gap: 40px;
+}
+
+.menu-column {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.menu-category {
+    background-color: #d2b386;
+    padding: 20px;
+    border-radius: 4px;
+}
+
+.menu-category h3 {
+    font-size: 20px;
+    color: #174f45;
+    margin-bottom: 12px;
+    border-bottom: 1px solid #174f45;
+    padding-bottom: 4px;
+}
+
+.menu-subtext {
+    font-size: 13px;
+    color: #174f45;
+    margin-bottom: 10px;
+    font-style: italic;
+}
+
+/* HTML Menu Tables */
+.menu-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 5px;
+}
+
+.menu-table th,
+.menu-table td {
+    text-align: left;
+    padding: 8px 6px;
+    font-size: 15px;
+    color: #174f45;
+}
+
+.menu-table th {
+    font-weight: bold;
+    border-bottom: 1px solid rgba(23, 79, 69, 0.3);
+}
+
+.menu-table td:not(:first-child),
+.menu-table th:not(:first-child) {
+    text-align: right;
+}
+
+.menu-table tr:nth-child(even) {
+    background-color: rgba(255, 251, 237, 0.3);
+}
+
+.price-single {
+    font-weight: bold;
+}
+
+/* =========================
+   PRODUCTS RESPONSIVENESS
+   ========================= */
+
+@media (max-width: 900px) {
+    .menu-grid {
+        flex-direction: column;
+        gap: 20px;
+    }
+}
+
+@media (max-width: 600px) {
+    .menu-tables-section {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .menu-table th,
+    .menu-table td {
+        font-size: 13px;
+        padding: 6px 4px;
+    }
+}

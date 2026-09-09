@@ -4,19 +4,232 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <title>Products | Perk Up Cafe</title>
+    <title>Products & Menu | Perk Up Cafe</title>
 </head>
 <body>
+
+    <!-- Navigation Bar -->
     <header>
         <nav>
-            <ul>
-                <li><a href="index.html">HOME</a></li>
-                <li><a href="products.html">PRODUCTS</a></li>
-                <li><a href="gallery.html">GALLERY</a></li>
-                <li><a href="about.html">ABOUT US</a></li>
-                <li><a href="contact.html">CONTACT US</a></li>
-            </ul>
+            <div class="menu-icon">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+
+            <div class="nav">
+                <ul>
+                    <li><a href="index.html">HOME</a></li>
+                    <li><a href="products.html" class="active">PRODUCTS</a></li>
+                    <li><a href="gallery.html">GALLERY</a></li>
+                    <li><a href="about.html">ABOUT US</a></li>
+                    <li><a href="contact.html">CONTACT US</a></li>
+                </ul>
+            </div>
         </nav>
     </header>
+
+    <!-- Sidebar -->
+    <aside class="sidebar"></aside>
+
+    <!-- Main Content -->
+    <main>
+
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="hero-image">
+                <img src="assets/PerkUp-Hero.jpg" alt="PerkUp Cafe Hero">
+            </div>
+            <div class="logo">
+                <a href="index.html">
+                    <img src="assets/PerkUpCafe-Logo.jpg" alt="PerkUp Cafe Logo">
+                </a>
+            </div>
+        </section>
+
+        <!-- Featured Products Section (3 Image Placeholders) -->
+        <section class="must-try">
+            <h2>Featured Specialties</h2>
+
+            <div class="products">
+
+                <div class="product">
+                    <img src="assets/Featured/HazelnutMacchiato.jpg" alt="Hazelnut Macchiato">
+                    <h3>Hazelnut Macchiato</h3>
+                    <p class="product-desc">Espresso layered with steamed milk and sweet hazelnut syrup.</p>
+                </div>
+
+                <div class="product">
+                    <img src="assets/Featured/Lemonade.jpg" alt="Lemonade">
+                    <h3>Lemonade</h3>
+                    <p class="product-desc">Refreshing squeezed lemonade served chilled over ice.</p>
+                </div>
+
+                <div class="product">
+                    <img src="assets/Featured/StrawberryLemonade.jpg" alt="Strawberry Lemonade">
+                    <h3>Strawberry Lemonade</h3>
+                    <p class="product-desc">Tangy lemonade infused with sweet strawberry puree.</p>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Complete Menu Tables Section -->
+        <section class="menu-tables-section">
+            <h2>Our Full Menu</h2>
+
+            <div class="menu-grid">
+
+                <!-- Left Column -->
+                <div class="menu-column">
+
+                    <!-- Coffee Category -->
+                    <div class="menu-category">
+                        <h3>Coffee</h3>
+                        <table class="menu-table">
+                            <thead>
+                                <tr>
+                                    <th>Item</th>
+                                    <th>Hot (8oz)</th>
+                                    <th>Hot (16oz)</th>
+                                    <th>Cold (16oz)</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr><td>Americano</td><td>₱100</td><td>₱120</td><td>₱130</td></tr>
+                                <tr><td>Cappucino</td><td>₱130</td><td>₱150</td><td>₱160</td></tr>
+                                <tr><td>Latte</td><td>₱130</td><td>₱150</td><td>₱160</td></tr>
+                                <tr><td>Spanish Latte</td><td>₱140</td><td>₱160</td><td>₱170</td></tr>
+                                <tr><td>Mocha</td><td>₱140</td><td>₱160</td><td>₱170</td></tr>
+                                <tr><td>White Mocha</td><td>₱140</td><td>₱160</td><td>₱170</td></tr>
+                                <tr><td>Hazelnut</td><td>₱140</td><td>₱160</td><td>₱170</td></tr>
+                                <tr><td>Caramel Macchiato</td><td>₱140</td><td>₱160</td><td>₱170</td></tr>
+                                <tr><td>Salted Caramel</td><td>₱140</td><td>₱160</td><td>₱170</td></tr>
+                                <tr><td>Almond</td><td>₱140</td><td>₱160</td><td>₱170</td></tr>
+                                <tr><td>French Vanilla</td><td>₱140</td><td>₱160</td><td>₱170</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <!-- Espresso Category -->
+                    <div class="menu-category">
+                        <h3>Espresso</h3>
+                        <table class="menu-table">
+                            <tbody>
+                                <tr><td>Single Shot</td><td class="price-single">₱80</td></tr>
+                                <tr><td>Double Shot</td><td class="price-single">₱100</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <!-- Milk Choice -->
+                    <div class="menu-category">
+                        <h3>Milk Choice</h3>
+                        <table class="menu-table">
+                            <tbody>
+                                <tr><td>Regular Milk</td><td class="price-single">₱40</td></tr>
+                                <tr><td>Oat Milk</td><td class="price-single">₱60</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <!-- Frappe Category -->
+                    <div class="menu-category">
+                        <h3>Frappe (Cold 16oz)</h3>
+                        <table class="menu-table">
+                            <tbody>
+                                <tr><td>Mocha / Caramel / Hazelnut</td><td class="price-single">₱170</td></tr>
+                                <tr><td>Almond / White Mocha / French Vanilla</td><td class="price-single">₱170</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                </div>
+
+                <!-- Right Column -->
+                <div class="menu-column">
+
+                    <!-- Non Coffee Category -->
+                    <div class="menu-category">
+                        <h3>Non-Coffee</h3>
+                        <table class="menu-table">
+                            <thead>
+                                <tr>
+                                    <th>Item</th>
+                                    <th>Hot (8oz)</th>
+                                    <th>Hot (16oz)</th>
+                                    <th>Cold (16oz)</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr><td>Tsokolate (Tablea)</td><td>₱140</td><td>₱160</td><td>₱170</td></tr>
+                                <tr><td>Chocolate</td><td>₱140</td><td>₱160</td><td>₱170</td></tr>
+                                <tr><td>Matcha</td><td>₱150</td><td>₱160</td><td>₱170</td></tr>
+                                <tr><td>Creamy Vanilla</td><td>₱150</td><td>₱160</td><td>₱170</td></tr>
+                                <tr><td>Flavored Tea</td><td>₱80</td><td>-</td><td>₱90</td></tr>
+                                <tr><td>Flavored Tea w/ Lemonade</td><td>-</td><td>-</td><td>₱110</td></tr>
+                                <tr><td>Orange Juice</td><td>-</td><td>-</td><td>₱90</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <!-- Smoothies -->
+                    <div class="menu-category">
+                        <h3>Smoothies (Cold 16oz)</h3>
+                        <table class="menu-table">
+                            <tbody>
+                                <tr><td>Tsokolate / Chocolate / Strawberry</td><td class="price-single">₱170</td></tr>
+                                <tr><td>Blueberry / Mixed Berry / Kiwi / Vanilla</td><td class="price-single">₱170</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <!-- Juice With Puree -->
+                    <div class="menu-category">
+                        <h3>Juice With Puree (Cold 16oz)</h3>
+                        <table class="menu-table">
+                            <tbody>
+                                <tr><td>Lemonade</td><td class="price-single">₱90</td></tr>
+                                <tr><td>Blueberry Lemonade</td><td class="price-single">₱110</td></tr>
+                                <tr><td>Strawberry Lemonade</td><td class="price-single">₱110</td></tr>
+                                <tr><td>Kiwi Lemonade</td><td class="price-single">₱110</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <!-- Mango Series -->
+                    <div class="menu-category">
+                        <h3>Mango Series</h3>
+                        <table class="menu-table">
+                            <tbody>
+                                <tr><td>Mango Juice</td><td class="price-single">₱90</td></tr>
+                                <tr><td>Orange Mango Juice</td><td class="price-single">₱110</td></tr>
+                                <tr><td>Mango Smoothie</td><td class="price-single">₱170</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <!-- Add-Ons -->
+                    <div class="menu-category">
+                        <h3>Syrup Add-Ons</h3>
+                        <p class="menu-subtext">Caramel, Hazelnut, Salted Caramel, Almond, Chocolate</p>
+                        <table class="menu-table">
+                            <tbody>
+                                <tr><td>Any Extra Syrup Shot</td><td class="price-single">₱40</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer>
+    </footer>
+
 </body>
 </html>
