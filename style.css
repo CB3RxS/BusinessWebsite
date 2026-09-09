@@ -643,3 +643,30 @@ footer {
     }
 
 }
+
+
+/* =========================
+   MENU PAGE
+   ========================= */
+
+.menu-page {
+    margin-left: 69px;
+    padding-top: 100px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 50px;
+    background-color: #fffbed;
+    min-height: 100vh;
+}
+
+.menu-image {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.menu-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
