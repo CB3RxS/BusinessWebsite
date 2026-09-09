@@ -212,28 +212,28 @@ main {
 
 .products {
     display: grid;
-
     grid-template-columns: repeat(3, 1fr);
-
     gap: 8%;
-
     padding: 0;
 }
 
 .product {
     min-width: 0;
     width: 80%;
+    text-decoration: none;
+    color: inherit;
+    overflow: hidden;
 }
 
 .product img {
     width: 100%;
     height: 400px;
-
     object-fit: cover;
-
     display: block;
-
     background-color: #d2b386;
+    transition: transform 0.35s ease,
+                filter 0.35s ease;
+    filter: brightness(1);
 }
 
 .product:nth-child(1) {
@@ -252,9 +252,14 @@ main {
     font-size: 20px;
     margin-top: 6px;
     color: #174f45;
+    transition: opacity 0.35s ease;
     justify-self: center;
 }
 
+.product:hover img {
+    transform: scale(1.04);
+    filter: brightness(0.85);
+}
 
 /* =========================
    COMMUNITY
