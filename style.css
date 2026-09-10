@@ -41,21 +41,17 @@ nav {
 .menu-icon {
     width: 70px;
     height: 70px;
-
     display: flex;
     flex-direction: column;
     justify-content: center;
-
     gap: 6px;
     padding-left: 15px;
 }
 
 .menu-icon span {
     display: block;
-
     width: 38px;
     height: 4px;
-
     background-color: #111;
     border-radius: 5px;
 }
@@ -66,23 +62,18 @@ nav {
 
 
 /* Navigation Links */
-
 .nav ul {
     list-style: none;
-
     display: flex;
     align-items: center;
-
     gap: 40px;
 }
 
 .nav a {
     text-decoration: none;
     color: #111;
-
     font-size: 20px;
     font-weight: bold;
-
     transition: opacity 0.2s ease;
 }
 
@@ -96,15 +87,11 @@ nav {
 
 .sidebar {
     position: fixed;
-
     top: 70px;
     left: 0;
-
     width: 69px;
     height: calc(100vh - 70px);
-
     background-color: #c4b398;
-
     z-index: 5;
 }
 
@@ -147,28 +134,21 @@ main {
 
 .logo {
     position: absolute;
-
     top: 45px;
     left: 50%;
-
     transform: translateX(-50%);
-
     width: 165px;
     height: 165px;
-
     border-radius: 50%;
-
     display: flex;
     justify-content: center;
     align-items: center;
-
     z-index: 2;
 }
 
 .logo img {
     width: 145px;
     height: 145px;
-
     object-fit: cover;
     border-radius: 50%;
 }
@@ -200,8 +180,7 @@ main {
     content: "";
     height: 2px;
     width: 30%;
-    
-    background: linear-gradient(
+        background: linear-gradient(
         to right,
         #174f45,
         rgba(23, 79, 69, 0)
@@ -212,28 +191,28 @@ main {
 
 .products {
     display: grid;
-
     grid-template-columns: repeat(3, 1fr);
-
     gap: 8%;
-
     padding: 0;
 }
 
 .product {
     min-width: 0;
     width: 80%;
+    text-decoration: none;
+    color: inherit;
+    overflow: hidden;
 }
 
 .product img {
     width: 100%;
     height: 400px;
-
     object-fit: cover;
-
     display: block;
-
     background-color: #d2b386;
+    transition: transform 0.35s ease,
+                filter 0.35s ease;
+    filter: brightness(1);
 }
 
 .product:nth-child(1) {
@@ -252,9 +231,14 @@ main {
     font-size: 20px;
     margin-top: 6px;
     color: #174f45;
+    transition: opacity 0.35s ease;
     justify-self: center;
 }
 
+.product:hover img {
+    transform: scale(1.04);
+    filter: brightness(0.85);
+}
 
 /* =========================
    COMMUNITY
@@ -262,9 +246,7 @@ main {
 
 .community {
     border-top: 2px solid #aaa;
-
     padding: 18px 34px 50px;
-
     background-color: #fffbed;
 }
 
@@ -277,19 +259,14 @@ main {
 
 .reviews {
     display: grid;
-
     grid-template-columns: repeat(3, 1fr);
-
     gap: 5.5%;
 }
 
 .review {
     height: 305px;
-
     background-color: #d2b386;
-
     padding: 20px 16px;
-
     color: #174f45;
 }
 
@@ -304,9 +281,7 @@ main {
 .review-date {
     font-size: 13px;
     font-weight: bold;
-
     margin-top: 2px;
-
     opacity: 0.8;
 }
 
@@ -316,7 +291,6 @@ main {
 .review p {
     font-size: 20px;
     font-weight: bold;
-
     margin-top: 45px;
 }
 
@@ -753,3 +727,357 @@ footer {
         padding: 6px 4px;
     }
 }
+
+
+/* =========================
+   MENU PAGE
+   ========================= */
+
+.menu-page {
+    margin-left: 69px;
+    padding-top: 100px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 50px;
+    background-color: #fffbed;
+    min-height: 100vh;
+}
+
+.menu-image {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.menu-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+
+/* =========================
+   CONTACT PAGE
+   ========================= */
+
+.contact-page {
+    margin-left: 69px;
+    padding-top: 100px;
+    padding-bottom: 30px;
+    background-color: #fffbed;
+    min-height: 100vh;
+}
+
+/* Contact Quadrants */
+
+.contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 100%;
+}
+
+
+/* =========================
+   CONTACT IMAGE
+   ========================= */
+
+.contact-image {
+    position: relative;
+    height: 650px;
+    overflow: hidden;
+}
+
+.contact-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* Dark overlay */
+
+.contact-image::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.15);
+}
+
+/* Contact Us Text */
+
+.contact-title {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    text-align: center;
+    white-space: nowrap;
+}
+
+.contact-title h1 {
+    font-size: 52px;
+    color: white;
+    font-weight: bold;
+}
+
+/* =========================
+   CONTACT FORM
+   ========================= */
+
+.contact-form {
+    height: 650px;
+    padding: 45px 50px;
+    background-color: #edd9ad;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/* Form Rows */
+
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+}
+
+/* Form Group */
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15px;
+}
+
+/* Labels */
+
+.form-group label {
+    font-size: 14px;
+    font-weight: bold;
+    color: #174f45;
+    margin-bottom: 6px;
+}
+
+/* Inputs */
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    border: none;
+    border-radius: 0;
+    padding: 10px;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    background-color: #fffbed;
+    color: #174f45;
+    outline: none;
+}
+
+/* Textarea */
+
+.form-group textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+/* File Upload */
+
+.form-group input[type="file"] {
+    padding: 7px;
+}
+
+
+/* Focus */
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    outline: 2px solid #174f45;
+}
+
+
+/* =========================
+   FORM BUTTONS
+   ========================= */
+
+.form-buttons {
+    display: flex;
+    gap: 12px;
+    margin-top: 5px;
+}
+
+.form-buttons button {
+    border: none;
+    padding: 11px 28px;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: opacity 0.2s ease;
+}
+
+.form-buttons button[type="submit"] {
+    background-color: #174f45;
+    color: white;
+}
+
+.form-buttons button[type="reset"] {
+    background-color: #c4b398;
+    color: #174f45;
+}
+
+.form-buttons button:hover {
+    opacity: 0.75;
+}
+
+
+/* =========================
+   FACEBOOK
+   ========================= */
+
+.facebook-link {
+    display: flex;
+    justify-content: center;
+    margin-top: 25px;
+}
+
+.facebook-link a {
+    width: 42px;
+    height: 42px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    background-color: #174f45;
+    border-radius: 50%;
+
+    transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.facebook-link svg {
+    width: 22px;
+    height: 22px;
+    fill: white;
+}
+
+.facebook-link a:hover {
+    transform: scale(1.1);
+    opacity: 0.8;
+}
+
+/* =========================
+   SHOP INFORMATION
+   ========================= */
+
+.shop-info {
+    min-height: 500px;
+    background-color: #edd9ad;
+    padding: 60px 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: #174f45;
+}
+
+.shop-info h2 {
+    font-size: 32px;
+    margin-bottom: 35px;
+}
+
+.shop-details {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.shop-detail h3 {
+    font-size: 18px;
+    margin-bottom: 5px;
+}
+
+.shop-detail p {
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+.shop-detail a {
+    color: #174f45;
+    text-decoration: none;
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+.shop-detail a:hover {
+    text-decoration: underline;
+}
+
+
+/* =========================
+   SHOP IMAGE
+   ========================= */
+
+.shop-image {
+    min-height: 500px;
+    overflow: hidden;
+}
+
+.shop-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* =========================
+   CONTACT RESPONSIVENESS
+   ========================= */
+
+@media (max-width: 900px) {
+
+    .contact-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .contact-image,
+    .contact-form {
+        height: auto;
+    }
+
+    .contact-image {
+        height: 450px;
+    }
+
+    .contact-form {
+        padding: 40px 35px;
+    }
+
+}
+
+
+@media (max-width: 600px) {
+
+    .contact-page {
+        margin-left: 0;
+        padding-top: 90px;
+    }
+
+    .contact-image {
+        height: 350px;
+    }
+
+    .contact-title h1 {
+        font-size: 40px;
+    }
+
+    .contact-form {
+        padding: 30px 20px;
+    }
+
+    .form-row {
+        grid-template-columns: 1fr;
+        gap: 0;
+    }
+
+}
+
