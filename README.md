@@ -46,6 +46,7 @@ No JavaScript or backend technologies
 
 ## Project Structure
 
+```text
 BusinessWebsite/
 │
 ├── about.html
