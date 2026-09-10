@@ -384,8 +384,25 @@ main {
     font-weight: bold;
 }
 
+.review-email {
+    font-size: 10px;
+    font-weight: bold;
+}
+
+.review-number {
+    font-size: 10px;
+    font-weight: bold;
+    font-style: italic;
+}
+
 .review-date {
     font-size: 13px;
+    font-weight: bold;
+    margin-top: 2px;
+    opacity: 0.8;
+}
+.review-time {
+    font-size: 12px;
     font-weight: bold;
     margin-top: 2px;
     opacity: 0.8;
@@ -395,7 +412,7 @@ main {
 /* Review Text */
 
 .review p {
-    font-size: 20px;
+    font-size: 18px;
     font-weight: bold;
     margin-top: 45px;
 }
