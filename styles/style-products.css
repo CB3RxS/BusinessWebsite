@@ -327,9 +327,31 @@ main {
    MENU PAGE
    ========================= */
 
+.menu-image-text h2 {
+    font-size: 27px;
+    margin-bottom: 18px;
+    margin-left: 100px;
+    color: #174f45;
+    display: flex;
+    align-items: center;
+    gap: 18px;
+}
+
+.menu-image-text h2::after {
+    content: "";
+    height: 2px;
+    width: 30%;
+    background: linear-gradient(
+        to right,
+        #174f45,
+        rgba(23, 79, 69, 0)
+    );
+}
+
+
 .menu-page {
     margin-left: 69px;
-    padding-top: 100px;
+    padding-top: 35px;
     padding-left: 20px;
     padding-right: 20px;
     padding-bottom: 50px;
