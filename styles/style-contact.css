@@ -126,7 +126,7 @@ nav {
 
 .contact-image {
     position: relative;
-    height: 650px;
+    height: 750px;
     overflow: hidden;
 }
 
@@ -172,7 +172,7 @@ nav {
    ========================= */
 
 .contact-form {
-    height: 650px;
+    height: 750px;
     padding: 45px 50px;
     background-color: #edd9ad;
     display: flex;
@@ -283,6 +283,30 @@ nav {
     opacity: 0.75;
 }
 
+.radio-options,
+.checkbox-options {
+    display:flex;
+    flex-wrap:wrap;
+    gap:15px;
+}
+
+.radio-options label,
+.checkbox-options label {
+    display:flex;
+    flex-direction:row;
+    align-items:center;
+    gap:6px;
+    font-size:14px;
+    font-weight:normal;
+    color:#174f45;
+    margin:0;
+}
+
+.radio-options input,
+.checkbox-options input {
+    width:auto;
+    accent-color:#174f45;
+}
 
 /* =========================
    FACEBOOK
