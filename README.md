@@ -1,4 +1,4 @@
-#Perk Up Cafe Website
+# Perk Up Cafe Website
 
 A simple, responsive café website for **Perk Up Cafe**, located at Robinsons Place Jaro, Iloilo City.
 The website was created using HTML and CSS, with a focus on clean navigation, visual presentation, café information, products, gallery content, and customer contact.
