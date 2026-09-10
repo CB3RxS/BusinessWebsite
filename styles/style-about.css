@@ -1,0 +1,371 @@
+/* =========================
+   GENERAL
+   ========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #fffbed;
+    color: #174f45;
+}
+
+
+/* =========================
+   NAVIGATION
+   ========================= */
+
+header {
+    height: 70px;
+    background-color: #d2b386;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 10;
+}
+
+nav {
+    height: 70px;
+    display: flex;
+    align-items: center;
+}
+
+
+/* Hamburger Icon */
+
+.menu-icon {
+    width: 70px;
+    height: 70px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 6px;
+    padding-left: 15px;
+}
+
+.menu-icon span {
+    display: block;
+    width: 38px;
+    height: 4px;
+    background-color: #111;
+    border-radius: 5px;
+}
+
+
+/* Navigation Links */
+
+.nav ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+.nav a {
+    text-decoration: none;
+    color: #111;
+    font-size: 20px;
+    font-weight: bold;
+    transition: opacity 0.2s ease;
+}
+
+.nav a:hover {
+    opacity: 0.6;
+}
+
+
+/* =========================
+   SIDEBAR
+   ========================= */
+
+.sidebar {
+    position: fixed;
+    top: 70px;
+    left: 0;
+    width: 69px;
+    height: calc(100vh - 70px);
+    background-color: #c4b398;
+    z-index: 5;
+}
+
+
+/* =========================
+   MAIN
+   ========================= */
+
+main {
+    margin-left: 69px;
+    padding-top: 70px;
+}
+
+
+/* =========================
+   HERO
+   ========================= */
+
+.hero {
+    height: 337px;
+    position: relative;
+    background-color: #fffbed;
+    overflow: hidden;
+}
+
+.hero-image {
+    height: 100%;
+    width: 100%;
+    position: relative;
+}
+
+.hero-image img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+}
+
+
+/* Logo */
+
+.logo {
+    position: absolute;
+    top: 45px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 165px;
+    height: 165px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2;
+}
+
+.logo img {
+    width: 145px;
+    height: 145px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+
+/* =========================
+   ABOUT US PAGE
+   ========================= */
+
+.about-section {
+    padding: 58px 34px 30px;
+    background-color: #fffbed;
+}
+
+.about-section h2 {
+    font-size: 27px;
+    margin-bottom: 24px;
+    color: #174f45;
+}
+
+
+/* About Content */
+
+.about-content {
+    display: flex;
+    gap: 40px;
+    align-items: flex-start;
+}
+
+.about-image {
+    flex: 1;
+    min-width: 300px;
+}
+
+.about-image img {
+    width: 100%;
+    height: 380px;
+    object-fit: cover;
+    background-color: #d2b386;
+    border-radius: 4px;
+    display: block;
+}
+
+.about-text {
+    flex: 1.5;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.about-text p {
+    font-size: 17px;
+    line-height: 1.6;
+    color: #174f45;
+}
+
+
+/* =========================
+   MISSION, VISION, VALUES
+   ========================= */
+
+.mvv-section {
+    border-top: 2px solid #aaa;
+    padding: 38px 34px 50px;
+    background-color: #fffbed;
+}
+
+.mvv-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.mvv-card {
+    background-color: #d2b386;
+    padding: 28px 22px;
+    color: #174f45;
+    border-radius: 4px;
+}
+
+.mvv-card h3 {
+    font-size: 22px;
+    margin-bottom: 12px;
+    color: #174f45;
+}
+
+.mvv-card p {
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+
+/* =========================
+   FOOTER
+   ========================= */
+
+footer {
+    background-color: #d2b386;
+    text-align: center;
+    padding: 18px 20px;
+    margin-left: 69px;
+    color: #174f45;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+
+/* =========================
+   RESPONSIVE DESIGN
+   ========================= */
+
+@media (max-width: 900px) {
+
+    .nav ul {
+        gap: 20px;
+    }
+
+    .nav a {
+        font-size: 16px;
+    }
+
+    .about-content {
+        flex-direction: column;
+    }
+
+    .about-image {
+        width: 100%;
+        min-width: 0;
+    }
+
+    .about-image img {
+        height: 280px;
+    }
+
+    .mvv-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+}
+
+
+@media (max-width: 600px) {
+
+    header,
+    nav {
+        height: 60px;
+    }
+
+    main {
+        margin-left: 0;
+    }
+
+    .sidebar {
+        display: none;
+    }
+
+    .menu-icon {
+        width: 60px;
+        height: 60px;
+        padding-left: 10px;
+    }
+
+    .menu-icon span {
+        width: 30px;
+        height: 3px;
+    }
+
+    .nav ul {
+        gap: 12px;
+    }
+
+    .nav a {
+        font-size: 12px;
+    }
+
+    .hero {
+        height: 280px;
+    }
+
+    .logo {
+        width: 130px;
+        height: 130px;
+        top: 35px;
+    }
+
+    .logo img {
+        width: 115px;
+        height: 115px;
+    }
+
+    .about-section,
+    .mvv-section {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .about-image img {
+        height: 220px;
+    }
+
+    .about-text p {
+        font-size: 15px;
+    }
+
+    .mvv-card {
+        padding: 22px 18px;
+    }
+
+    .mvv-card h3 {
+        font-size: 20px;
+    }
+
+    .mvv-card p {
+        font-size: 15px;
+    }
+
+    footer {
+        margin-left: 0;
+    }
+}

@@ -1,0 +1,454 @@
+/* =========================
+   GENERAL
+   ========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #fffbed;
+    color: #174f45;
+}
+
+
+/* =========================
+   NAVIGATION
+   ========================= */
+
+header {
+    height: 70px;
+    background-color: #d2b386;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 10;
+}
+
+nav {
+    height: 70px;
+    display: flex;
+    align-items: center;
+}
+
+
+/* Hamburger Icon */
+
+.menu-icon {
+    width: 70px;
+    height: 70px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 6px;
+    padding-left: 15px;
+}
+
+.menu-icon span {
+    display: block;
+    width: 38px;
+    height: 4px;
+    background-color: #111;
+    border-radius: 5px;
+}
+
+.menu-icon span:first-child {
+    width: 38px;
+}
+
+
+/* Navigation Links */
+
+.nav ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+.nav a {
+    text-decoration: none;
+    color: #111;
+    font-size: 20px;
+    font-weight: bold;
+    transition: opacity 0.2s ease;
+}
+
+.nav a:hover {
+    opacity: 0.6;
+}
+
+
+/* =========================
+   SIDEBAR
+   ========================= */
+
+.sidebar {
+    position: fixed;
+    top: 70px;
+    left: 0;
+    width: 69px;
+    height: calc(100vh - 70px);
+    background-color: #c4b398;
+    z-index: 5;
+}
+
+
+/* =========================
+   MAIN
+   ========================= */
+
+main {
+    margin-left: 69px;
+    padding-top: 70px;
+}
+
+
+/* =========================
+   HERO
+   ========================= */
+
+.hero {
+    height: 337px;
+    position: relative;
+    background-color: #fffbed;
+    overflow: hidden;
+}
+
+.hero-image {
+    height: 100%;
+    width: 100%;
+    position: relative;
+}
+
+.hero-image img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+}
+
+
+/* Logo */
+
+.logo {
+    position: absolute;
+    top: 45px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 165px;
+    height: 165px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2;
+}
+
+.logo img {
+    width: 145px;
+    height: 145px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+
+/* =========================
+   MUST TRY
+   ========================= */
+
+.must-try {
+    padding: 58px 34px 22px;
+    background-color: #fffbed;
+}
+
+.must-try h2,
+.community h2 {
+    font-size: 27px;
+    margin-bottom: 18px;
+    color: #174f45;
+}
+
+.must-try h2 {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+}
+
+.must-try h2::after {
+    content: "";
+    height: 2px;
+    width: 30%;
+    background: linear-gradient(
+        to right,
+        #174f45,
+        rgba(23, 79, 69, 0)
+    );
+}
+
+
+/* Product Grid */
+
+.products {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 8%;
+    padding: 0;
+}
+
+.product {
+    min-width: 0;
+    width: 80%;
+    text-decoration: none;
+    color: inherit;
+    overflow: hidden;
+}
+
+.product img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    display: block;
+    background-color: #d2b386;
+    transition:
+        transform 0.35s ease,
+        filter 0.35s ease;
+    filter: brightness(1);
+}
+
+.product:nth-child(1) {
+    justify-self: start;
+}
+
+.product:nth-child(2) {
+    justify-self: center;
+}
+
+.product:nth-child(3) {
+    justify-self: end;
+}
+
+.product h3 {
+    font-size: 20px;
+    margin-top: 6px;
+    color: #174f45;
+    transition: opacity 0.35s ease;
+    justify-self: center;
+}
+
+.product:hover img {
+    transform: scale(1.04);
+    filter: brightness(0.85);
+}
+
+
+/* =========================
+   COMMUNITY
+   ========================= */
+
+.community {
+    border-top: 2px solid #aaa;
+    padding: 18px 34px 50px;
+    background-color: #fffbed;
+}
+
+.community h2 {
+    margin-bottom: 18px;
+}
+
+
+/* Review Grid */
+
+.reviews {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 5.5%;
+}
+
+.review {
+    height: 305px;
+    background-color: #d2b386;
+    padding: 20px 16px;
+    color: #174f45;
+}
+
+
+/* Review User */
+
+.review-user {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.review-date {
+    font-size: 13px;
+    font-weight: bold;
+    margin-top: 2px;
+    opacity: 0.8;
+}
+
+
+/* Review Text */
+
+.review p {
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 45px;
+}
+
+
+/* =========================
+   FOOTER
+   ========================= */
+
+footer {
+    background-color: #d2b386;
+    text-align: center;
+    padding: 18px 20px;
+    margin-left: 69px;
+    color: #174f45;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+
+/* =========================
+   RESPONSIVE DESIGN
+   ========================= */
+
+/* Tablet */
+
+@media (max-width: 900px) {
+
+    /* Navigation */
+
+    .nav ul {
+        gap: 20px;
+    }
+
+    .nav a {
+        font-size: 16px;
+    }
+
+
+    /* Products */
+
+    .products {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 30px;
+    }
+
+
+    /* Reviews */
+
+    .reviews {
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+}
+
+
+/* Mobile */
+
+@media (max-width: 600px) {
+
+    /* Header */
+
+    header,
+    nav {
+        height: 60px;
+    }
+
+
+    /* Main */
+
+    main {
+        margin-left: 0;
+    }
+
+
+    /* Sidebar */
+
+    .sidebar {
+        display: none;
+    }
+
+
+    /* Hamburger Icon */
+
+    .menu-icon {
+        width: 60px;
+        height: 60px;
+        padding-left: 10px;
+    }
+
+    .menu-icon span {
+        width: 30px;
+        height: 3px;
+    }
+
+
+    /* Navigation */
+
+    .nav ul {
+        gap: 12px;
+    }
+
+    .nav a {
+        font-size: 12px;
+    }
+
+
+    /* Hero */
+
+    .hero {
+        height: 280px;
+    }
+
+
+    /* Logo */
+
+    .logo {
+        width: 130px;
+        height: 130px;
+        top: 35px;
+    }
+
+    .logo img {
+        width: 115px;
+        height: 115px;
+    }
+
+
+    /* Section Padding */
+
+    .must-try,
+    .community {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+
+    /* Products */
+
+    .products {
+        grid-template-columns: 1fr 1fr;
+        gap: 20px;
+    }
+
+    .product img {
+        height: 200px;
+    }
+
+
+    /* Footer */
+
+    footer {
+        margin-left: 0;
+    }
+}
