@@ -157,6 +157,105 @@ main {
     border-radius: 50%;
 }
 
+.intro-divider {
+    height:5px;
+    margin:35px 0 0;
+    border-top:2px solid #aaa;
+    border-bottom:2px solid #aaa;
+}
+
+.cafe-intro {
+    display:flex;
+    align-items:center;
+    width:100%;
+    min-height:400px;
+    margin-top:35px;
+    padding:50px 50px;
+    background-color:#fffbed;
+    gap:35px;
+    flex-wrap:nowrap;
+}
+
+.cafe-intro-image {
+    width:320px;
+    height:400px;
+    flex:0 0 320px;
+    overflow:hidden;
+}
+
+.cafe-intro-image img {
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    display:block;
+}
+
+.cafe-intro-text {
+    flex:1 1 auto;
+    min-width:0;
+    color:#174f45;
+    margin-right: 60px;
+    margin-left: 60px;
+    border-left:2px solid #aaa;
+    padding-left:30px;
+}
+
+.cafe-intro-text h2 {
+    font-size:32px;
+    margin-bottom:20px;
+}
+
+
+.cafe-intro-text p {
+    font-size:17px;
+    line-height:1.6;
+    margin-bottom:15px;
+}
+
+.cafe-info-box {
+    width:320px;
+    height:400px;
+    flex:0 0 320px;
+    padding:28px 25px;
+    background-color:#d2b386;
+    color:#174f45;
+    
+}
+
+.cafe-info-item h2 {
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+
+.cafe-info-divider {
+    height:5px;
+    margin:10px 0 0;
+    border-top:2px solid #edd9ad;
+    border-bottom:2px solid #edd9ad;
+    margin-bottom: 15px;
+}
+
+.cafe-info-item h3 {
+    font-size: 18px;
+    margin-top: 15px;
+    margin-bottom: 10px;
+}
+
+.cafe-info-item p{
+    font-size: 16px;
+    line-height: 1.2;
+}
+
+.cafe-info-item a {
+    color: #174f45;
+    text-decoration: none;
+    font-size: 16px;
+    line-height: 1.2;
+}
+
+.cafe-info-item a:hover {
+    text-decoration: underline;
+}
 
 /* =========================
    MUST TRY
@@ -335,6 +434,19 @@ footer {
         font-size: 16px;
     }
 
+    /* Cafe Intro */
+
+    .cafe-intro {
+        grid-template-columns:1fr;
+    }
+
+    .cafe-intro-image {
+        height:300px;
+    }
+
+    .cafe-intro-text {
+        padding:40px 35px;
+    }
 
     /* Products */
 
@@ -392,6 +504,23 @@ footer {
         height: 3px;
     }
 
+    /* Short Intro */
+
+    .cafe-intro-image {
+        height:250px;
+    }
+
+    .cafe-intro-text {
+        padding:35px 20px;
+    }
+
+    .cafe-intro-text h2 {
+        font-size:27px;
+    }
+
+    .cafe-intro-text p {
+        font-size:15px;
+    }
 
     /* Navigation */
 
