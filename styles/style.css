@@ -107,13 +107,15 @@ nav {
     pointer-events: none;
     transition: opacity 0.2s ease;
     white-space: nowrap;
+    visibility: hidden;
+    transition: opacity 0.2s ease, visibility 0.2s ease;
 }
 
 .sidebar.open .sidebar-links {
     opacity: 1;
     pointer-events: auto;
     transition-delay: 0.1s;
-    
+    visibility: visible;
 }
 
 .sidebar-links a {
@@ -160,6 +162,13 @@ nav {
 .nav a.active {
     border-bottom: 3px solid #174f45;
     padding-bottom: 2px;
+}
+
+.menu-icon:focus-visible,
+.nav a:focus-visible,
+.sidebar-links a:focus-visible {
+    outline: 3px solid #174f45;
+    outline-offset: 2px;
 }
 
 
@@ -306,6 +315,8 @@ footer {
         width: 60px;
         height: 60px;
         padding-left: 10px;
+        background: none;
+        border: none;
     }
 
     .menu-icon span {
