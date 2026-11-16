@@ -1,261 +1,118 @@
-/* =========================
-   GENERAL
-   ========================= */
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-body {
-    font-family: Arial, sans-serif;
-    background-color: #fffbed;
-    color: #174f45;
-}
-
+/* =========================================================
+   style-home.css  -  styles that ONLY the Home page needs
+   (shared styles live in style.css)
+   ========================================================= */
 
 /* =========================
-   NAVIGATION
+   CAFE INTRO
    ========================= */
-
-header {
-    height: 70px;
-    background-color: #d2b386;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    z-index: 10;
-}
-
-nav {
-    height: 70px;
-    display: flex;
-    align-items: center;
-}
-
-
-/* Hamburger Icon */
-
-.menu-icon {
-    width: 70px;
-    height: 70px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    gap: 6px;
-    padding-left: 15px;
-}
-
-.menu-icon span {
-    display: block;
-    width: 38px;
-    height: 4px;
-    background-color: #111;
-    border-radius: 5px;
-}
-
-.menu-icon span:first-child {
-    width: 38px;
-}
-
-
-/* Navigation Links */
-
-.nav ul {
-    list-style: none;
-    display: flex;
-    align-items: center;
-    gap: 40px;
-}
-
-.nav a {
-    text-decoration: none;
-    color: #111;
-    font-size: 20px;
-    font-weight: bold;
-    transition: opacity 0.2s ease;
-}
-
-.nav a:hover {
-    opacity: 0.6;
-}
-
-
-/* =========================
-   SIDEBAR
-   ========================= */
-
-.sidebar {
-    position: fixed;
-    top: 70px;
-    left: 0;
-    width: 69px;
-    height: calc(100vh - 70px);
-    background-color: #c4b398;
-    z-index: 5;
-}
-
-
-/* =========================
-   MAIN
-   ========================= */
-
-main {
-    margin-left: 69px;
-    padding-top: 70px;
-}
-
-
-/* =========================
-   HERO
-   ========================= */
-
-.hero {
-    height: 337px;
-    position: relative;
-    background-color: #fffbed;
-    overflow: hidden;
-}
-
-.hero-image {
-    height: 100%;
-    width: 100%;
-    position: relative;
-}
-
-.hero-image img {
-    height: 100%;
-    width: 100%;
-    object-fit: cover;
-    object-position: center;
-    display: block;
-}
-
-
-/* Logo */
-
-.logo {
-    position: absolute;
-    top: 45px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 165px;
-    height: 165px;
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 2;
-}
-
-.logo img {
-    width: 145px;
-    height: 145px;
-    object-fit: cover;
-    border-radius: 50%;
-}
 
 .intro-divider {
-    height:5px;
-    margin:35px 0 0;
-    border-top:2px solid #aaa;
-    border-bottom:2px solid #aaa;
+    height: 5px;
+    margin: 35px 0 0;
+    border-top: 2px solid #aaa;
+    border-bottom: 2px solid #aaa;
 }
 
 .cafe-intro {
-    display:flex;
-    align-items:center;
-    width:100%;
-    min-height:400px;
-    margin-top:35px;
-    padding:50px 50px;
-    background-color:#fffbed;
-    gap:35px;
-    flex-wrap:nowrap;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    min-height: 400px;
+    margin-top: 35px;
+    padding: 50px 50px;
+    background-color: #fffbed;
+    gap: 35px;
+    flex-wrap: nowrap;
 }
 
 .cafe-intro-image {
-    width:320px;
-    height:400px;
-    flex:0 0 320px;
-    overflow:hidden;
+    width: 320px;
+    height: 400px;
+    flex: 0 0 320px;
+    overflow: hidden;
 }
 
 .cafe-intro-image img {
-    width:100%;
-    height:100%;
-    object-fit:cover;
-    display:block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
 }
 
 .cafe-intro-text {
-    flex:1 1 auto;
-    min-width:0;
-    color:#174f45;
+    flex: 1 1 auto;
+    min-width: 0;
+    color: #174f45;
     margin-right: 60px;
     margin-left: 60px;
-    border-left:2px solid #aaa;
-    padding-left:30px;
+    border-left: 2px solid #aaa;
+    padding-left: 30px;
 }
 
 .cafe-intro-text h2 {
-    font-size:32px;
-    margin-bottom:20px;
+    font-size: 32px;
+    margin-bottom: 20px;
 }
-
 
 .cafe-intro-text p {
-    font-size:17px;
-    line-height:1.6;
-    margin-bottom:15px;
+    font-size: 17px;
+    line-height: 1.6;
+    margin-bottom: 15px;
 }
+
+
+/* =========================
+   CAFE INFO BOX
+   ========================= */
 
 .cafe-info-box {
-    width:320px;
-    height:400px;
-    flex:0 0 320px;
-    padding:28px 25px;
-    background-color:#d2b386;
-    color:#174f45;
-    
+    margin: 0 34px 20px;
+    padding: 28px 30px 32px;
+    background-color: #d2b386;
+    color: #174f45;
 }
 
-.cafe-info-item h2 {
+.cafe-info-box h2 {
     font-size: 30px;
     margin-bottom: 10px;
 }
 
 .cafe-info-divider {
-    height:5px;
-    margin:10px 0 0;
-    border-top:2px solid #edd9ad;
-    border-bottom:2px solid #edd9ad;
-    margin-bottom: 15px;
+    height: 5px;
+    margin: 10px 0 15px;
+    border-top: 2px solid #edd9ad;
+    border-bottom: 2px solid #edd9ad;
+}
+
+/* Three columns: Location | Opening Hours | Services */
+.cafe-info-columns {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
 }
 
 .cafe-info-item h3 {
     font-size: 18px;
-    margin-top: 15px;
     margin-bottom: 10px;
 }
 
-.cafe-info-item p{
+.cafe-info-item p {
     font-size: 16px;
-    line-height: 1.2;
+    line-height: 1.4;
 }
 
 .cafe-info-item a {
     color: #174f45;
     text-decoration: none;
     font-size: 16px;
-    line-height: 1.2;
+    line-height: 1.4;
 }
 
 .cafe-info-item a:hover {
     text-decoration: underline;
 }
+
 
 /* =========================
    MUST TRY
@@ -336,8 +193,6 @@ main {
     font-size: 20px;
     margin-top: 6px;
     color: #174f45;
-    transition: opacity 0.35s ease;
-    justify-self: center;
 }
 
 .product:hover img {
@@ -356,10 +211,6 @@ main {
     background-color: #fffbed;
 }
 
-.community h2 {
-    margin-bottom: 18px;
-}
-
 
 /* Review Grid */
 
@@ -370,29 +221,15 @@ main {
 }
 
 .review {
-    height: 305px;
+    min-height: 220px;
     background-color: #d2b386;
     padding: 20px 16px;
     color: #174f45;
 }
 
-
-/* Review User */
-
 .review-user {
     font-size: 18px;
     font-weight: bold;
-}
-
-.review-email {
-    font-size: 10px;
-    font-weight: bold;
-}
-
-.review-number {
-    font-size: 10px;
-    font-weight: bold;
-    font-style: italic;
 }
 
 .review-date {
@@ -401,6 +238,7 @@ main {
     margin-top: 2px;
     opacity: 0.8;
 }
+
 .review-time {
     font-size: 12px;
     font-weight: bold;
@@ -408,72 +246,52 @@ main {
     opacity: 0.8;
 }
 
-
-/* Review Text */
-
 .review p {
     font-size: 18px;
     font-weight: bold;
-    margin-top: 45px;
+    margin-top: 25px;
 }
 
 
 /* =========================
-   FOOTER
-   ========================= */
-
-footer {
-    background-color: #d2b386;
-    text-align: center;
-    padding: 18px 20px;
-    margin-left: 69px;
-    color: #174f45;
-    font-weight: bold;
-    font-size: 14px;
-}
-
-
-/* =========================
-   RESPONSIVE DESIGN
+   RESPONSIVE - HOME ONLY
    ========================= */
 
 /* Tablet */
 
 @media (max-width: 900px) {
 
-    /* Navigation */
-
-    .nav ul {
-        gap: 20px;
-    }
-
-    .nav a {
-        font-size: 16px;
-    }
-
-    /* Cafe Intro */
-
+    /* Intro: stack the photo above the text */
     .cafe-intro {
-        grid-template-columns:1fr;
+        flex-direction: column;
+        align-items: stretch;
+        padding: 30px 20px;
+        gap: 25px;
     }
 
     .cafe-intro-image {
-        height:300px;
+        width: 100%;
+        flex: none;
+        height: 300px;
     }
 
     .cafe-intro-text {
-        padding:40px 35px;
+        margin: 0;
+        border-left: none;
+        border-top: 2px solid #aaa;
+        padding: 25px 0 0;
     }
 
-    /* Products */
+    /* Info box: columns become a single stack */
+    .cafe-info-columns {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
 
     .products {
         grid-template-columns: repeat(2, 1fr);
         gap: 30px;
     }
-
-
-    /* Reviews */
 
     .reviews {
         grid-template-columns: 1fr;
@@ -486,101 +304,28 @@ footer {
 
 @media (max-width: 600px) {
 
-    /* Header */
-
-    header,
-    nav {
-        height: 60px;
-    }
-
-
-    /* Main */
-
-    main {
-        margin-left: 0;
-    }
-
-
-    /* Sidebar */
-
-    .sidebar {
-        display: none;
-    }
-
-
-    /* Hamburger Icon */
-
-    .menu-icon {
-        width: 60px;
-        height: 60px;
-        padding-left: 10px;
-    }
-
-    .menu-icon span {
-        width: 30px;
-        height: 3px;
-    }
-
-    /* Short Intro */
-
     .cafe-intro-image {
-        height:250px;
-    }
-
-    .cafe-intro-text {
-        padding:35px 20px;
+        height: 250px;
     }
 
     .cafe-intro-text h2 {
-        font-size:27px;
+        font-size: 27px;
     }
 
     .cafe-intro-text p {
-        font-size:15px;
+        font-size: 15px;
     }
 
-    /* Navigation */
-
-    .nav ul {
-        gap: 12px;
+    .cafe-info-box {
+        margin-left: 20px;
+        margin-right: 20px;
     }
-
-    .nav a {
-        font-size: 12px;
-    }
-
-
-    /* Hero */
-
-    .hero {
-        height: 280px;
-    }
-
-
-    /* Logo */
-
-    .logo {
-        width: 130px;
-        height: 130px;
-        top: 35px;
-    }
-
-    .logo img {
-        width: 115px;
-        height: 115px;
-    }
-
-
-    /* Section Padding */
 
     .must-try,
     .community {
         padding-left: 20px;
         padding-right: 20px;
     }
-
-
-    /* Products */
 
     .products {
         grid-template-columns: 1fr 1fr;
@@ -589,12 +334,5 @@ footer {
 
     .product img {
         height: 200px;
-    }
-
-
-    /* Footer */
-
-    footer {
-        margin-left: 0;
     }
 }

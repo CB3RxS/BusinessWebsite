@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/style.css">
     <link rel="stylesheet" href="styles/style-home.css">
     <title>Home | Perk Up Cafe</title>
 </head>
@@ -18,7 +19,7 @@
 
             <div class="nav">
                 <ul>
-                    <li><a href="index.html">HOME</a></li>
+                    <li><a href="index.html" class="active">HOME</a></li>
                     <li><a href="products.html">PRODUCTS</a></li>
                     <li><a href="gallery.html">GALLERY</a></li>
                     <li><a href="about.html">ABOUT US</a></li>
@@ -38,11 +39,11 @@
         <!-- Hero Section -->
         <section class="hero">
             <div class="hero-image">
-                <img src="assets/perkup_hero.jpg" alt="PerkUp Cafe Hero">
+                <img src="assets/perkup_hero.jpg" alt="Perk Up Cafe hero photo">
             </div>
             <div class="logo">
                 <a href="index.html">
-                    <img src="assets/perkup_logo.jpg" alt="PerkUp Cafe Logo">
+                    <img src="assets/perkup_logo.jpg" alt="Perk Up Cafe logo">
                 </a>
             </div>
         </section>
@@ -51,7 +52,7 @@
 
         <section class="cafe-intro">
             <div class="cafe-intro-image">
-                <img src="assets/perkupcafefront.jpg" alt="PerkUp Cafe Front">
+                <img src="assets/perkupcafefront.jpg" alt="Perk Up Cafe storefront">
             </div>
             <div class="cafe-intro-text">
                 <h2>Perk Up Cafe</h2>
@@ -63,15 +64,19 @@
         </section>
 
 
-        <div class="cafe-info-box">
+        <!-- Cafe Info Box -->
+        <section class="cafe-info-box">
+            <h2>Perk Up Cafe</h2>
+            <div class="cafe-info-divider"></div>
+
+            <div class="cafe-info-columns">
                 <div class="cafe-info-item">
-                    <h2>Perk Up Cafe</h2>
-                    <div class="cafe-info-divider"></div>
                     <h3>Location</h3>
-                    <a href="https://l.facebook.com/l.php?u=https%3A%2F%2Fwww.bing.com%2Fmaps%2Fdefault.aspx%3Fv%3D2%26pc%3DFACEBK%26mid%3D8100%26where1%3D2nd%2520Floor%2520Robinsons%2520Place%2520Jaro%252C%2520Iloilo%2520City%252C%2520Philippines%252C%25205000%26FORM%3DFBKPL1%26mkt%3Den-US%26fbclid%3DIwcGRvZgVleHRuA2FlbQIxMABicmlkETF1VjM1NVlNUkRNUTRHUVJKc3J0YwZhcHBfaWQQMjIyMDM5MTc4ODIwMDg5MgABHkBK41GlY81KpQu-JncP25GlbZ5Kv6rhoJYVnZHaJPxoBhHn10n5wO8Cz2RT_aem_yHYRs9Q-9hdDDl7cR7UxuQ&h=AUCeOVq0_TCZPo0Au96nLQ9lT6he7S_3QR8EWpm-pjm9e1OOFGtZWJBp1APK8tO_XLx2f3vvybc9jm-AuIyegXizOXGGP0pQ0078Mf3JCzZVbkPtYvUnTY_4SrCRdgjW1IUf" target="_blank">
+                    <a href="https://www.google.com/maps/search/?api=1&amp;query=Perk+Up+Cafe+Robinsons+Place+Jaro+Iloilo+City" target="_blank" rel="noopener noreferrer">
                         2nd Floor Robinsons Place Jaro, Iloilo City, Philippines, 5000
                     </a>
                 </div>
+
                 <div class="cafe-info-item">
                     <h3>Opening Hours</h3>
                     <p>Monday - Sunday</p>
@@ -91,7 +96,7 @@
             <h2>Must Try!</h2>
             <div class="products">
                 <a href="products.html" class="product">
-                    <img src="assets/Featured/HazelnutMacchiato.jpg" alt="HazelnutMacchiato">
+                    <img src="assets/Featured/HazelnutMacchiato.jpg" alt="Hazelnut Macchiato">
                     <h3>Hazelnut Macchiato</h3>
                 </a>
                 <a href="products.html" class="product">
@@ -99,7 +104,7 @@
                     <h3>Lemonade</h3>
                 </a>
                 <a href="products.html" class="product">
-                    <img src="assets/Featured/StrawberryLemonade.jpg" alt="StrawberryLemonade">
+                    <img src="assets/Featured/StrawberryLemonade.jpg" alt="Strawberry Lemonade">
                     <h3>Strawberry Lemonade</h3>
                 </a>
             </div>
@@ -110,13 +115,7 @@
             <h2>From the Community...</h2>
             <div class="reviews">
                 <div class="review">
-
                     <div class="review-user">John Doe</div>
-                    <div class="review-email">johndoe@gmail.com</div>
-
-                    <div class="review-user">Patrick Jane</div>
-                    <div class="review-email">mentalistpatrickjane@gmail.com</div>
-
                     <div class="review-date">September 10, 2026</div>
                     <div class="review-time">12:05 PM</div>
 
@@ -124,18 +123,15 @@
                 </div>
                 <div class="review">
                     <div class="review-user">Michael James Ross</div>
-                    <div class="review-email">mikeross@gmail.com</div>
                     <div class="review-date">August 27, 2026</div>
 
-                    <p>The coffee very affordable for the size. Definitely freshly ground, wasn't too bitter nor too bland.</p>
+                    <p>The coffee is very affordable for the size. Definitely freshly ground, wasn't too bitter nor too bland.</p>
                 </div>
                 <div class="review">
                     <div class="review-user">Justin Russo</div>
-                    <div class="review-email">jrusso@gmail.com</div>
-                    <div class="review-number">09567694200</div>
                     <div class="review-date">August 25, 2026</div>
 
-                    <p>All of the beverages are great. The frappes, and smoothies are incredible.</p>
+                    <p>All of the beverages are great. The frappes and smoothies are incredible.</p>
                 </div>
             </div>
         </section>
@@ -143,6 +139,7 @@
     
     <!-- Footer -->
     <footer>
+        <p>&copy; 2026 Perk Up Cafe &middot; Student project for CCS 222 (demonstration only)</p>
     </footer>
 
 </body>

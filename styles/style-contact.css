@@ -1,102 +1,7 @@
-/* =========================
-   GENERAL
-   ========================= */
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-body {
-    font-family: Arial, sans-serif;
-    background-color: #fffbed;
-    color: #174f45;
-}
-
-
-/* =========================
-   NAVIGATION
-   ========================= */
-
-header {
-    height: 70px;
-    background-color: #d2b386;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    z-index: 10;
-}
-
-nav {
-    height: 70px;
-    display: flex;
-    align-items: center;
-}
-
-
-/* Hamburger Icon */
-
-.menu-icon {
-    width: 70px;
-    height: 70px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    gap: 6px;
-    padding-left: 15px;
-}
-
-.menu-icon span {
-    display: block;
-    width: 38px;
-    height: 4px;
-    background-color: #111;
-    border-radius: 5px;
-}
-
-.menu-icon span:first-child {
-    width: 38px;
-}
-
-
-/* Navigation Links */
-
-.nav ul {
-    list-style: none;
-    display: flex;
-    align-items: center;
-    gap: 40px;
-}
-
-.nav a {
-    text-decoration: none;
-    color: #111;
-    font-size: 20px;
-    font-weight: bold;
-    transition: opacity 0.2s ease;
-}
-
-.nav a:hover {
-    opacity: 0.6;
-}
-
-
-/* =========================
-   SIDEBAR
-   ========================= */
-
-.sidebar {
-    position: fixed;
-    top: 70px;
-    left: 0;
-    width: 69px;
-    height: calc(100vh - 70px);
-    background-color: #c4b398;
-    z-index: 5;
-}
-
+/* =========================================================
+   style-contact.css  -  styles that ONLY the Contact page needs
+   (shared styles live in style.css)
+   ========================================================= */
 
 /* =========================
    CONTACT PAGE
@@ -111,7 +16,7 @@ nav {
 }
 
 
-/* Contact Grid */
+/* Contact Grid (2 x 2 boxes) */
 
 .contact-grid {
     display: grid;
@@ -126,11 +31,14 @@ nav {
 
 .contact-image {
     position: relative;
-    height: 750px;
+    min-height: 750px;
     overflow: hidden;
 }
 
+/* The photo fills the box, whatever height the grid gives it */
 .contact-image img {
+    position: absolute;
+    inset: 0;
     width: 100%;
     height: 100%;
     object-fit: cover;
@@ -172,7 +80,7 @@ nav {
    ========================= */
 
 .contact-form {
-    height: 750px;
+    min-height: 750px;
     padding: 45px 50px;
     background-color: #edd9ad;
     display: flex;
@@ -250,6 +158,34 @@ nav {
 }
 
 
+/* Radio buttons and checkboxes */
+
+.radio-options,
+.checkbox-options {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.radio-options label,
+.checkbox-options label {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 6px;
+    font-size: 14px;
+    font-weight: normal;
+    color: #174f45;
+    margin: 0;
+}
+
+.radio-options input,
+.checkbox-options input {
+    width: auto;
+    accent-color: #174f45;
+}
+
+
 /* =========================
    FORM BUTTONS
    ========================= */
@@ -283,30 +219,6 @@ nav {
     opacity: 0.75;
 }
 
-.radio-options,
-.checkbox-options {
-    display:flex;
-    flex-wrap:wrap;
-    gap:15px;
-}
-
-.radio-options label,
-.checkbox-options label {
-    display:flex;
-    flex-direction:row;
-    align-items:center;
-    gap:6px;
-    font-size:14px;
-    font-weight:normal;
-    color:#174f45;
-    margin:0;
-}
-
-.radio-options input,
-.checkbox-options input {
-    width:auto;
-    accent-color:#174f45;
-}
 
 /* =========================
    FACEBOOK
@@ -390,15 +302,18 @@ nav {
 
 
 /* =========================
-   cafe IMAGE
+   CAFE IMAGE
    ========================= */
 
 .cafe-image {
+    position: relative;
     min-height: 500px;
     overflow: hidden;
 }
 
 .cafe-image img {
+    position: absolute;
+    inset: 0;
     width: 100%;
     height: 100%;
     object-fit: cover;
@@ -407,53 +322,22 @@ nav {
 
 
 /* =========================
-   FOOTER
-   ========================= */
-
-footer {
-    background-color: #d2b386;
-    text-align: center;
-    padding: 18px 20px;
-    margin-left: 69px;
-    color: #174f45;
-    font-weight: bold;
-    font-size: 14px;
-}
-
-
-/* =========================
-   RESPONSIVE DESIGN
+   RESPONSIVE - CONTACT ONLY
    ========================= */
 
 @media (max-width: 900px) {
 
-    /* Navigation */
-
-    .nav ul {
-        gap: 20px;
-    }
-
-    .nav a {
-        font-size: 16px;
-    }
-
-
-    /* Contact Grid */
-
+    /* The 2 x 2 grid becomes one column */
     .contact-grid {
         grid-template-columns: 1fr;
     }
 
-    .contact-image,
-    .contact-form {
-        height: auto;
-    }
-
     .contact-image {
-        height: 450px;
+        min-height: 450px;
     }
 
     .contact-form {
+        min-height: 0;
         padding: 40px 35px;
     }
 }
@@ -461,52 +345,13 @@ footer {
 
 @media (max-width: 600px) {
 
-    /* Header */
-
-    header,
-    nav {
-        height: 60px;
-    }
-
-
-    /* Sidebar */
-
-    .sidebar {
-        display: none;
-    }
-
-
-    /* Navigation */
-
-    .menu-icon {
-        width: 60px;
-        height: 60px;
-        padding-left: 10px;
-    }
-
-    .menu-icon span {
-        width: 30px;
-        height: 3px;
-    }
-
-    .nav ul {
-        gap: 12px;
-    }
-
-    .nav a {
-        font-size: 12px;
-    }
-
-
-    /* Contact Page */
-
     .contact-page {
         margin-left: 0;
         padding-top: 90px;
     }
 
     .contact-image {
-        height: 350px;
+        min-height: 350px;
     }
 
     .contact-title h1 {
@@ -517,18 +362,8 @@ footer {
         padding: 30px 20px;
     }
 
-
-    /* Form Rows */
-
     .form-row {
         grid-template-columns: 1fr;
         gap: 0;
-    }
-
-
-    /* Footer */
-
-    footer {
-        margin-left: 0;
     }
 }
