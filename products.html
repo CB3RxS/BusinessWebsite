@@ -91,13 +91,21 @@
         <section class="menu-tables-section">
             <h2>Our Full Menu</h2>
 
+            <div class="filter-bar" role="group" aria-label="Filter the menu by category">
+                <button type="button" class="filter-btn active" data-filter="all" aria-pressed="true">All</button>
+                <button type="button" class="filter-btn" data-filter="coffee" aria-pressed="false">Coffee</button>
+                <button type="button" class="filter-btn" data-filter="non-coffee" aria-pressed="false">Non-Coffee</button>
+                <button type="button" class="filter-btn" data-filter="smoothies" aria-pressed="false">Smoothies</button>
+                <button type="button" class="filter-btn" data-filter="juice" aria-pressed="false">Juice</button>
+            </div>
+
             <div class="menu-grid">
 
                 <!-- Left Column -->
                 <div class="menu-column">
 
                     <!-- Coffee Category -->
-                    <div class="menu-category">
+                    <div class="menu-category" data-category="coffee">
                         <h3>Coffee</h3>
                         <table class="menu-table">
                             <thead>
@@ -125,7 +133,7 @@
                     </div>
 
                     <!-- Espresso Category -->
-                    <div class="menu-category">
+                    <div class="menu-category" data-category="coffee">
                         <h3>Espresso</h3>
                         <table class="menu-table">
                             <tbody>
@@ -136,7 +144,7 @@
                     </div>
 
                     <!-- Milk Choice -->
-                    <div class="menu-category">
+                    <div class="menu-category" data-category="coffee">
                         <h3>Milk Choice</h3>
                         <table class="menu-table">
                             <tbody>
@@ -147,7 +155,7 @@
                     </div>
 
                     <!-- Frappe Category -->
-                    <div class="menu-category">
+                    <div class="menu-category" data-category="coffee">
                         <h3>Frappe (Cold 16oz)</h3>
                         <table class="menu-table">
                             <tbody>
@@ -163,7 +171,7 @@
                 <div class="menu-column">
 
                     <!-- Non Coffee Category -->
-                    <div class="menu-category">
+                    <div class="menu-category" data-category="non-coffee">
                         <h3>Non-Coffee</h3>
                         <table class="menu-table">
                             <thead>
@@ -187,7 +195,7 @@
                     </div>
 
                     <!-- Smoothies -->
-                    <div class="menu-category">
+                    <div class="menu-category" data-category="smoothies">
                         <h3>Smoothies (Cold 16oz)</h3>
                         <table class="menu-table">
                             <tbody>
@@ -198,7 +206,7 @@
                     </div>
 
                     <!-- Juice With Puree -->
-                    <div class="menu-category">
+                    <div class="menu-category" data-category="juice">
                         <h3>Juice With Puree (Cold 16oz)</h3>
                         <table class="menu-table">
                             <tbody>
@@ -211,7 +219,7 @@
                     </div>
 
                     <!-- Mango Series -->
-                    <div class="menu-category">
+                    <div class="menu-category" data-category="juice">
                         <h3>Mango Series</h3>
                         <table class="menu-table">
                             <tbody>
@@ -223,7 +231,7 @@
                     </div>
 
                     <!-- Add-Ons -->
-                    <div class="menu-category">
+                    <div class="menu-category" data-category="coffee">
                         <h3>Syrup Add-Ons</h3>
                         <p class="menu-subtext">Caramel, Hazelnut, Salted Caramel, Almond, Chocolate</p>
                         <table class="menu-table">
@@ -252,5 +260,6 @@
         <p>&copy; 2026 Perk Up Cafe &middot; Student project for CCS 222 (demonstration only)</p>
     </footer>
 <script src="script.js"></script>
+<script src="products.js"></script>
 </body>
 </html>

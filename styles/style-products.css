@@ -141,6 +141,61 @@
     font-style: italic;
 }
 
+/* =========================
+   MENU FILTER BUTTONS
+   ========================= */
+
+.filter-bar {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 24px;
+}
+
+.filter-btn {
+    border: none;
+    border-radius: 4px;
+    padding: 10px 20px;
+    font-family: inherit;
+    font-size: 14px;
+    font-weight: bold;
+    background-color: #d2b386;
+    color: #174f45;
+    cursor: pointer;
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.filter-btn:hover {
+    opacity: 0.85;
+}
+
+/* The currently selected button */
+.filter-btn.active {
+    background-color: #174f45;
+    color: white;
+}
+
+.filter-btn:focus-visible {
+    outline: 3px solid #174f45;
+    outline-offset: 2px;
+}
+
+
+/* =========================
+   FILTER LAYOUT HELPERS
+   ========================= */
+
+/* Make the "hidden" attribute win over display: flex on .menu-column */
+.menu-grid [hidden] {
+    display: none;
+}
+
+/* When only one column is left, center it and keep it readable */
+.menu-grid.single-column .menu-column {
+    max-width: 700px;
+    margin: 0 auto;
+}
+
 
 /* Menu Tables */
 
