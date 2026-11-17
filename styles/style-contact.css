@@ -116,6 +116,21 @@
     margin-bottom: 6px;
 }
 
+/* Fieldset + legend: same look as the other labels, without the default border */
+fieldset.form-group {
+    border: none;
+    padding: 0;
+    min-width: 0;
+}
+
+.form-group legend {
+    font-size: 14px;
+    font-weight: bold;
+    color: #174f45;
+    margin-bottom: 6px;
+    padding: 0;
+}
+
 
 /* Inputs */
 
@@ -185,6 +200,29 @@
     accent-color: #174f45;
 }
 
+/* Validation messages */
+
+.error-message {
+    color: #b00020;
+    font-size: 13px;
+    margin-top: 4px;
+}
+
+/* Red outline on a field that failed validation */
+.form-group input.invalid,
+.form-group select.invalid,
+.form-group textarea.invalid {
+    outline: 2px solid #b00020;
+}
+
+/* Success message */
+.form-success {
+    margin-top: 15px;
+    padding: 12px;
+    background-color: #174f45;
+    color: white;
+    font-size: 14px;
+}
 
 /* =========================
    FORM BUTTONS
