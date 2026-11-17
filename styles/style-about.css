@@ -51,92 +51,65 @@
 }
 
 
-/* =========================
-   MISSION, VISION, VALUES
-   ========================= */
-
-.mvv-section {
-    border-top: 2px solid #aaa;
-    padding: 38px 34px 50px;
-    background-color: #fffbed;
-}
-
-.mvv-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 30px;
-}
+/* Vision, Mission, Values */
 
 .mvv-card {
+    position: relative;
+    overflow: hidden;
     background-color: #d2b386;
     padding: 28px 22px;
+    min-height: 150px; 
     color: #174f45;
     border-radius: 4px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    cursor: pointer;
 }
 
-.mvv-card h3 {
+.mvv-front {
+    transition: filter 0.35s ease, opacity 0.35s ease, transform 0.35s ease;
+}
+
+.mvv-front h3 {
     font-size: 22px;
-    margin-bottom: 12px;
+    margin: 0;
     color: #174f45;
 }
 
-.mvv-card p {
-    font-size: 16px;
+.mvv-card.is-hovered .mvv-front {
+    filter: blur(6px);
+    opacity: 0.2;
+    transform: scale(0.95);
+}
+
+.mvv-reveal {
+    position: absolute;
+    inset: 0;
+    padding: 24px 22px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: rgba(210, 179, 134, 0.75);
+    backdrop-filter: blur(4px);
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.35s ease;
+}
+
+.mvv-card.is-hovered .mvv-reveal {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.mvv-reveal p {
+    font-size: 15px;
+    font-weight: bold;
     line-height: 1.5;
-}
-
-
-/* =========================
-   RESPONSIVE - ABOUT ONLY
-   ========================= */
-
-@media (max-width: 900px) {
-
-    .about-content {
-        flex-direction: column;
-    }
-
-    .about-image {
-        width: 100%;
-        min-width: 0;
-    }
-
-    .about-image img {
-        height: 280px;
-    }
-
-    .mvv-grid {
-        grid-template-columns: 1fr;
-        gap: 20px;
-    }
-}
-
-
-@media (max-width: 600px) {
-
-    .about-section,
-    .mvv-section {
-        padding-left: 20px;
-        padding-right: 20px;
-    }
-
-    .about-image img {
-        height: 220px;
-    }
-
-    .about-text p {
-        font-size: 15px;
-    }
-
-    .mvv-card {
-        padding: 22px 18px;
-    }
-
-    .mvv-card h3 {
-        font-size: 20px;
-    }
-
-    .mvv-card p {
-        font-size: 15px;
-    }
+    color: #174f45;
+    margin: 0;
+    border-bottom: 1.5px solid #174f45;
+    padding-bottom: 2px;
 }
