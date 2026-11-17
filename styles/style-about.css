@@ -73,7 +73,8 @@
 }
 
 .mvv-front h3 {
-    font-size: 22px;
+    font-size: 28px;
+    letter-spacing: 2.3px;
     margin: 0;
     color: #174f45;
 }
@@ -105,7 +106,7 @@
 }
 
 .mvv-reveal p {
-    font-size: 15px;
+    font-size: 16.3px;
     font-weight: bold;
     line-height: 1.5;
     color: #174f45;

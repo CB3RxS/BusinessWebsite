@@ -11,7 +11,4 @@ mvvCards.forEach((card) => {
         card.classList.remove('is-hovered');
     });
 
-    card.addEventListener('click', () => {
-        card.classList.toggle('is-hovered');
-    });
 });
