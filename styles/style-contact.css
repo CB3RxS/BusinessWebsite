@@ -359,49 +359,123 @@ fieldset.form-group {
 }
 
 
+
 /* =========================
    RESPONSIVE - CONTACT ONLY
    ========================= */
 
+/* Tablet */
 @media (max-width: 900px) {
 
-    /* The 2 x 2 grid becomes one column */
     .contact-grid {
         grid-template-columns: 1fr;
     }
 
     .contact-image {
-        min-height: 450px;
+        min-height: 400px;
     }
 
     .contact-form {
         min-height: 0;
         padding: 40px 35px;
     }
+
+    .cafe-info {
+        min-height: auto;
+        padding: 45px 35px;
+    }
+
+    .cafe-image {
+        min-height: 400px;
+    }
 }
 
 
+/* Mobile */
 @media (max-width: 600px) {
 
     .contact-page {
         margin-left: 0;
-        padding-top: 90px;
+        padding-top: 60px;
+        padding-bottom: 20px;
     }
 
     .contact-image {
-        min-height: 350px;
+        min-height: 280px;
     }
 
     .contact-title h1 {
-        font-size: 40px;
+        font-size: 34px;
     }
 
     .contact-form {
-        padding: 30px 20px;
+        padding: 30px 18px;
     }
 
     .form-row {
         grid-template-columns: 1fr;
         gap: 0;
+    }
+
+    .form-group {
+        margin-bottom: 18px;
+    }
+
+    /* Easier touch interaction */
+    .form-group input,
+    .form-group select {
+        min-height: 44px;
+        font-size: 16px;
+    }
+
+    .form-group textarea {
+        min-height: 120px;
+        font-size: 16px;
+    }
+
+    .radio-options,
+    .checkbox-options {
+        gap: 12px;
+    }
+
+    .radio-options label,
+    .checkbox-options label {
+        min-height: 35px;
+    }
+
+    .form-buttons {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .form-buttons button {
+        width: 100%;
+        min-height: 44px;
+    }
+
+    .cafe-info {
+        padding: 35px 20px;
+    }
+
+    .cafe-info h2 {
+        font-size: 26px;
+        margin-bottom: 25px;
+    }
+
+    .cafe-details {
+        gap: 20px;
+    }
+
+    .cafe-detail h3 {
+        font-size: 17px;
+    }
+
+    .cafe-detail p,
+    .cafe-detail a {
+        font-size: 15px;
+    }
+
+    .cafe-image {
+        min-height: 260px;
     }
 }

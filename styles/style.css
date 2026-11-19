@@ -262,12 +262,12 @@ footer {
 }
 
 
+
 /* =========================
-   RESPONSIVE DESIGN (shared parts)
+   RESPONSIVE DESIGN (SHARED)
    ========================= */
 
 /* Tablet */
-
 @media (max-width: 900px) {
 
     .nav ul {
@@ -280,41 +280,54 @@ footer {
 }
 
 
-/* Mobile */
-
-@media (max-width: 600px) {
+/* Mobile Navigation */
+@media (max-width: 700px) {
 
     header,
     nav {
         height: 60px;
     }
 
+    /* Hide desktop navigation */
+    .nav {
+        display: none;
+    }
+
+    /* Main content uses full screen width */
     main {
         margin-left: 0;
     }
 
+    /* Mobile sidebar */
     .sidebar {
         display: block;
+        position: fixed;
         top: 60px;
+        left: 0;
         width: 0;
         height: calc(100vh - 60px);
+        height: calc(100dvh - 60px);
+        overflow-x: hidden;
+        overflow-y: auto;
+        z-index: 11;
+        transition: width 0.3s ease;
     }
 
     .sidebar.open {
-        width: 220px;
+        width: min(250px, 80vw);
+        box-shadow: 4px 0 12px rgba(0, 0, 0, 0.2);
     }
 
-    .menu-icon.active span:nth-child(1) {
-        transform: translateY(9px) rotate(45deg);
-    }
-    .menu-icon.active span:nth-child(3) {
-        transform: translateY(-9px) rotate(-45deg);
+    .sidebar-links {
+        padding: 30px 25px;
     }
 
+    /* Hamburger button */
     .menu-icon {
         width: 60px;
         height: 60px;
         padding-left: 10px;
+        margin-right: 0;
         background: none;
         border: none;
     }
@@ -324,13 +337,30 @@ footer {
         height: 3px;
     }
 
-    .nav ul {
-        gap: 10px;
+    .menu-icon.active span:nth-child(1) {
+        transform: translateY(9px) rotate(45deg);
     }
 
-    .nav a {
-        font-size: 11px;
-        white-space: nowrap;
+    .menu-icon.active span:nth-child(3) {
+        transform: translateY(-9px) rotate(-45deg);
+    }
+
+    /* Dark background behind the sidebar */
+    body.menu-open::before {
+        content: "";
+        position: fixed;
+        inset: 60px 0 0;
+        background: rgba(0, 0, 0, 0.4);
+        z-index: 4;
+    }
+
+    /* Prevent background scrolling */
+    body.menu-open {
+        overflow: hidden;
+    }
+
+    footer {
+        margin-left: 0;
     }
 
     .hero {
@@ -347,8 +377,85 @@ footer {
         width: 115px;
         height: 115px;
     }
+}
+
+
+/* Small Mobile Devices */
+@media (max-width: 400px) {
+
+    .hero {
+        height: 220px;
+    }
+
+    .logo {
+        width: 110px;
+        height: 110px;
+        top: 25px;
+    }
+
+    .logo img {
+        width: 95px;
+        height: 95px;
+    }
+}
+
+
+/* Accessibility: Reduce animation when requested */
+@media (prefers-reduced-motion: reduce) {
+
+    *,
+    *::before,
+    *::after {
+        scroll-behavior: auto !important;
+        transition-duration: 0.01ms !important;
+        animation-duration: 0.01ms !important;
+    }
+}
+
+
+/* =========================
+   GLOBAL MOBILE IMPROVEMENTS
+   ========================= */
+
+/* Prevent horizontal overflow */
+html {
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+
+body {
+    min-width: 320px;
+    overflow-x: hidden;
+}
+
+/* Make images responsive */
+img {
+    max-width: 100%;
+}
+
+/* Improve touch interactions */
+button,
+a,
+input,
+select,
+textarea {
+    touch-action: manipulation;
+}
+
+/* Prevent long text from breaking layouts */
+p,
+h1,
+h2,
+h3 {
+    overflow-wrap: break-word;
+}
+
+/* Avoid oversized footer text */
+@media (max-width: 600px) {
 
     footer {
-        margin-left: 0;
+        padding: 16px 12px;
+        font-size: 12px;
+        line-height: 1.5;
     }
 }

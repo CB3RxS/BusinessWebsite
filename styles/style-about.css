@@ -114,3 +114,103 @@
     border-bottom: 1.5px solid #174f45;
     padding-bottom: 2px;
 }
+
+
+/* =========================
+   RESPONSIVE - ABOUT ONLY
+   ========================= */
+
+/* Tablet */
+@media (max-width: 900px) {
+
+    .about-section {
+        padding: 45px 25px 30px;
+    }
+
+    .about-content {
+        flex-direction: column;
+        gap: 25px;
+    }
+
+    .about-image {
+        width: 100%;
+        min-width: 0;
+        flex: none;
+    }
+
+    .about-image img {
+        height: 350px;
+    }
+
+    .about-text {
+        width: 100%;
+    }
+}
+
+
+/* Mobile */
+@media (max-width: 600px) {
+
+    .about-section {
+        padding: 35px 15px 25px;
+    }
+
+    .about-section h2 {
+        font-size: 23px;
+        margin-bottom: 18px;
+    }
+
+    .about-content {
+        gap: 20px;
+    }
+
+    .about-image img {
+        height: 240px;
+    }
+
+    .about-text {
+        gap: 14px;
+    }
+
+    .about-text p {
+        font-size: 15px;
+        line-height: 1.6;
+    }
+
+    /* Mission, Vision, Values cards */
+    .mvv-card {
+        min-height: 135px;
+        padding: 20px 15px;
+    }
+
+    .mvv-front h3 {
+        font-size: 23px;
+        letter-spacing: 1.5px;
+    }
+
+    .mvv-reveal {
+        padding: 18px 15px;
+    }
+
+    .mvv-reveal p {
+        font-size: 14px;
+        line-height: 1.4;
+    }
+}
+
+
+/* Very Small Screens */
+@media (max-width: 360px) {
+
+    .about-image img {
+        height: 210px;
+    }
+
+    .mvv-front h3 {
+        font-size: 20px;
+    }
+
+    .mvv-reveal p {
+        font-size: 13px;
+    }
+}

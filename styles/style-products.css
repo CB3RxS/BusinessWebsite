@@ -124,6 +124,8 @@
     background-color: #d2b386;
     padding: 20px;
     border-radius: 4px;
+    min-width: 0;
+    overflow-x: auto;
 }
 
 .menu-category h3 {
@@ -201,6 +203,7 @@
 
 .menu-table {
     width: 100%;
+    min-width: 400px;
     border-collapse: collapse;
     margin-top: 5px;
 }
@@ -276,14 +279,16 @@
 }
 
 
+
 /* =========================
    RESPONSIVE - PRODUCTS ONLY
    ========================= */
 
+/* Tablet */
 @media (max-width: 900px) {
 
     .products {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(2, minmax(0, 1fr));
         gap: 30px;
     }
 
@@ -291,30 +296,92 @@
         flex-direction: column;
         gap: 20px;
     }
+
+    .product {
+        width: 100%;
+    }
 }
 
 
+/* Mobile */
 @media (max-width: 600px) {
 
     .must-try,
     .menu-tables-section,
     .menu-image-text {
-        padding-left: 20px;
-        padding-right: 20px;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    .must-try,
+    .menu-image-text {
+        padding-top: 35px;
+    }
+
+    .must-try h2,
+    .menu-tables-section h2,
+    .menu-image-text h2 {
+        font-size: 23px;
     }
 
     .products {
-        grid-template-columns: 1fr 1fr;
-        gap: 20px;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 20px 12px;
+    }
+
+    .product {
+        width: 100%;
     }
 
     .product img {
-        height: 200px;
+        height: 190px;
+    }
+
+    .product h3 {
+        font-size: 16px;
+    }
+
+    .product-desc {
+        font-size: 13px;
+    }
+
+    .menu-category {
+        padding: 15px;
+    }
+
+    .menu-category h3 {
+        font-size: 18px;
+    }
+
+    .menu-table {
+        min-width: 400px;
     }
 
     .menu-table th,
     .menu-table td {
         font-size: 13px;
-        padding: 6px 4px;
+        padding: 7px 6px;
+    }
+
+    .filter-bar {
+        gap: 8px;
+    }
+
+    .filter-btn {
+        padding: 9px 13px;
+        font-size: 13px;
+    }
+}
+
+
+/* Very Small Screens */
+@media (max-width: 360px) {
+
+    .products {
+        grid-template-columns: 1fr;
+    }
+
+    .product img {
+        height: 240px;
     }
 }

@@ -1,46 +1,87 @@
-// Global JavaScript for whole site
+// GLOBAL JAVASCRIPT
 
-// Hamburger Menu & Sidebar
+// Mobile Navigation
 const menuIcon = document.querySelector('.menu-icon');
 const sidebar = document.getElementById('sidebar');
+const sidebarLinks = document.querySelectorAll('.sidebar-links a');
 
-// Safety check: only run if both elements exist on this page
+const mobileBreakpoint = window.matchMedia('(max-width: 700px)');
+
 if (menuIcon && sidebar) {
 
+    // Open sidebar
     function openMenu() {
-        menuIcon.classList.add('active');
         sidebar.classList.add('open');
-        menuIcon.setAttribute('aria-expanded', 'true');   // NEW: tells screen readers it's open
+        menuIcon.classList.add('active');
+        document.body.classList.add('menu-open');
+
+        menuIcon.setAttribute('aria-expanded', 'true');
     }
 
+    // Close sidebar
     function closeMenu() {
-        menuIcon.classList.remove('active');
         sidebar.classList.remove('open');
-        menuIcon.setAttribute('aria-expanded', 'false');  // NEW
+        menuIcon.classList.remove('active');
+        document.body.classList.remove('menu-open');
+
+        menuIcon.setAttribute('aria-expanded', 'false');
     }
 
-    // Toggle the menu when the hamburger is clicked
+    // Toggle sidebar
     menuIcon.addEventListener('click', (event) => {
-        event.stopPropagation(); // stops the document click below from closing it immediately
+
+        event.stopPropagation();
+
         if (sidebar.classList.contains('open')) {
             closeMenu();
         } else {
             openMenu();
         }
+
     });
 
-    // Close the menu when the user clicks outside the sidebar
+    // Close when clicking outside
     document.addEventListener('click', (event) => {
-        if (sidebar.classList.contains('open') && !sidebar.contains(event.target)) {
+
+        if (
+            sidebar.classList.contains('open') &&
+            !sidebar.contains(event.target) &&
+            !menuIcon.contains(event.target)
+        ) {
             closeMenu();
         }
+
     });
 
-    // NEW: Escape closes the menu and returns focus to the button
+    // Close when selecting a navigation link
+    sidebarLinks.forEach((link) => {
+
+        link.addEventListener('click', () => {
+            closeMenu();
+        });
+
+    });
+
+    // Close when pressing Escape
     document.addEventListener('keydown', (event) => {
-        if (event.key === 'Escape' && sidebar.classList.contains('open')) {
+
+        if (
+            event.key === 'Escape' &&
+            sidebar.classList.contains('open')
+        ) {
             closeMenu();
             menuIcon.focus();
         }
+
     });
+
+    // Close sidebar when returning to desktop layout
+    mobileBreakpoint.addEventListener('change', (event) => {
+
+        if (!event.matches) {
+            closeMenu();
+        }
+
+    });
+
 }

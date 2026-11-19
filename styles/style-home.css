@@ -300,39 +300,136 @@
 }
 
 
-/* Mobile */
 
-@media (max-width: 600px) {
+/* Home Responsive design */
+
+/* Tablet */
+@media (max-width: 900px) {
+
+    .cafe-intro {
+        flex-direction: column;
+        align-items: stretch;
+        padding: 30px 20px;
+        gap: 25px;
+    }
 
     .cafe-intro-image {
-        height: 250px;
+        width: 100%;
+        flex: none;
+        height: 300px;
+    }
+
+    .cafe-intro-text {
+        margin: 0;
+        border-left: none;
+        border-top: 2px solid #aaa;
+        padding: 25px 0 0;
+    }
+
+    .cafe-info-columns {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .products {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 30px;
+    }
+
+    .reviews {
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+}
+
+
+/* Mobile */
+@media (max-width: 600px) {
+
+    .cafe-intro {
+        padding: 25px 20px;
+        margin-top: 20px;
+        min-height: auto;
+    }
+
+    .cafe-intro-image {
+        height: 240px;
     }
 
     .cafe-intro-text h2 {
-        font-size: 27px;
+        font-size: 25px;
+        margin-bottom: 12px;
     }
 
     .cafe-intro-text p {
         font-size: 15px;
+        line-height: 1.6;
     }
 
     .cafe-info-box {
-        margin-left: 20px;
-        margin-right: 20px;
+        margin: 0 15px 20px;
+        padding: 22px 18px;
+    }
+
+    .cafe-info-box h2 {
+        font-size: 25px;
+    }
+
+    .cafe-info-item h3 {
+        font-size: 17px;
+    }
+
+    .cafe-info-item p,
+    .cafe-info-item a {
+        font-size: 15px;
     }
 
     .must-try,
     .community {
-        padding-left: 20px;
-        padding-right: 20px;
+        padding: 35px 15px;
+    }
+
+    .must-try h2,
+    .community h2 {
+        font-size: 23px;
     }
 
     .products {
-        grid-template-columns: 1fr 1fr;
-        gap: 20px;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 20px 12px;
+    }
+
+    .product {
+        width: 100%;
     }
 
     .product img {
-        height: 200px;
+        height: 190px;
+    }
+
+    .product h3 {
+        font-size: 16px;
+    }
+
+    .review {
+        min-height: auto;
+    }
+
+    .review p {
+        font-size: 16px;
+        margin-top: 15px;
+    }
+}
+
+
+/* Very Small Screens */
+@media (max-width: 360px) {
+
+    .products {
+        grid-template-columns: 1fr;
+    }
+
+    .product img {
+        height: 240px;
     }
 }
