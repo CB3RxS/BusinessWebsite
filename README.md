@@ -1,12 +1,15 @@
 # Perk Up Cafe Website
 
 A simple, responsive café website for **Perk Up Cafe**, located at Robinsons Place Jaro, Iloilo City.
-The website was created using HTML and CSS, with a focus on clean navigation, visual presentation, café information, products, gallery content, and customer contact.
 
+The website was developed using HTML, CSS, and JavaScript, focusing on clean navigation, visual presentation, café information, products, gallery content, and customer interaction. It also features responsive layouts and a Light/Dark Mode toggle for an improved browsing experience across different devices.
 
 ## Features
 
-- Responsive navigation bar
+- Responsive navigation bar with collapsible hamburger menu
+- Light and Dark Mode toggle
+  - Switch between light and dark themes
+  - Automatically saves the selected theme for future visits
 - Home Page with:
   - Hero banner
   - Café introduction
@@ -29,41 +32,54 @@ The website was created using HTML and CSS, with a focus on clean navigation, vi
   - Message
   - File upload
   - Submit button
-  - Reset Button
-- Facebook button (redirects user)
-- Clickable Map location
+  - Reset button
+- Facebook button (redirects users to Facebook)
+- Clickable map location
 - Café opening hours and available services
-- Responsive layouts for smaller screen sizes
+- Responsive layouts for desktop, tablet, and mobile screens
 - Hover effects on selected elements
-
+- Interactive elements powered by JavaScript
 
 ## Technologies
+
 - HTML
 - CSS
+- JavaScript
 - SVG
-
-No JavaScript or backend technologies
 
 ## Project Structure
 
 ```text
 BusinessWebsite/
 │
-├── about.html
-├── contact.html
-├── gallery.html
 ├── index.html
 ├── products.html
+├── gallery.html
+├── about.html
+├── contact.html
+│
+├── script.js
+├── products.js
+├── about.js
+├── contact.js
 │
 ├── styles/
-│   ├── style-about.css
-│   ├── style-contact.css
-│   ├── style-gallery.css
-│   ├── style-index.css
+│   ├── style.css
+│   ├── style-home.css
 │   ├── style-products.css
+│   ├── style-gallery.css
+│   ├── style-about.css
+│   └── style-contact.css
 │
 └── assets/
-    ├──featured/
-    │   └──assets used for featured/Must Try products
+    ├── featured/
+    │   └── Assets used for featured/Must-Try products
     │
-    └──assets used throughout different pages
+    └── Assets used throughout different pages
+```
+
+## Notes
+
+- The website is built using front-end technologies only.
+- No backend or database integration is currently implemented.
+- The website is designed to provide a responsive and user-friendly browsing experience across different screen sizes.
