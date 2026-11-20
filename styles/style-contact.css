@@ -220,7 +220,7 @@ fieldset.form-group {
     margin-top: 15px;
     padding: 12px;
     background-color: var(--color-text);
-    color: white;
+    color: var(--color-page);
     font-size: 14px;
 }
 
@@ -275,7 +275,7 @@ fieldset.form-group {
     align-items: center;
     justify-content: center;
     text-decoration: none;
-    background-color: var(--color-text);
+    background-color: #174f45;
     border-radius: 50%;
     transition: transform 0.2s ease, opacity 0.2s ease;
 }
