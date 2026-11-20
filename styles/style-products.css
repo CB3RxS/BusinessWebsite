@@ -174,7 +174,7 @@
 /* The currently selected button */
 .filter-btn.active {
     background-color: var(--color-text);
-    color: white;
+    color: var(--color-accent);
 }
 
 .filter-btn:focus-visible {
