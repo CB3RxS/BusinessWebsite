@@ -10,8 +10,8 @@
 .intro-divider {
     height: 5px;
     margin: 35px 0 0;
-    border-top: 2px solid #aaa;
-    border-bottom: 2px solid #aaa;
+    border-top: 2px solid var(--color-border);
+    border-bottom: 2px solid var(--color-border);
 }
 
 .cafe-intro {
@@ -21,7 +21,7 @@
     min-height: 400px;
     margin-top: 35px;
     padding: 50px 50px;
-    background-color: #fffbed;
+    background-color: var(--color-page);
     gap: 35px;
     flex-wrap: nowrap;
 }
@@ -43,10 +43,10 @@
 .cafe-intro-text {
     flex: 1 1 auto;
     min-width: 0;
-    color: #174f45;
+    color: var(--color-text);
     margin-right: 60px;
     margin-left: 60px;
-    border-left: 2px solid #aaa;
+    border-left: 2px solid var(--color-border);
     padding-left: 30px;
 }
 
@@ -69,8 +69,8 @@
 .cafe-info-box {
     margin: 0 34px 20px;
     padding: 28px 30px 32px;
-    background-color: #d2b386;
-    color: #174f45;
+    background-color: var(--color-accent);
+    color: var(--color-text);
 }
 
 .cafe-info-box h2 {
@@ -81,8 +81,8 @@
 .cafe-info-divider {
     height: 5px;
     margin: 10px 0 15px;
-    border-top: 2px solid #edd9ad;
-    border-bottom: 2px solid #edd9ad;
+    border-top: 2px solid var(--color-panel);
+    border-bottom: 2px solid var(--color-panel);
 }
 
 /* Three columns: Location | Opening Hours | Services */
@@ -103,7 +103,7 @@
 }
 
 .cafe-info-item a {
-    color: #174f45;
+    color: var(--color-text);
     text-decoration: none;
     font-size: 16px;
     line-height: 1.4;
@@ -120,14 +120,14 @@
 
 .must-try {
     padding: 58px 34px 22px;
-    background-color: #fffbed;
+    background-color: var(--color-page);
 }
 
 .must-try h2,
 .community h2 {
     font-size: 27px;
     margin-bottom: 18px;
-    color: #174f45;
+    color: var(--color-text);
 }
 
 .must-try h2 {
@@ -142,7 +142,7 @@
     width: 30%;
     background: linear-gradient(
         to right,
-        #174f45,
+        var(--color-text),
         rgba(23, 79, 69, 0)
     );
 }
@@ -170,7 +170,7 @@
     height: 400px;
     object-fit: cover;
     display: block;
-    background-color: #d2b386;
+    background-color: var(--color-accent);
     transition:
         transform 0.35s ease,
         filter 0.35s ease;
@@ -192,7 +192,7 @@
 .product h3 {
     font-size: 20px;
     margin-top: 6px;
-    color: #174f45;
+    color: var(--color-text);
 }
 
 .product:hover img {
@@ -206,9 +206,9 @@
    ========================= */
 
 .community {
-    border-top: 2px solid #aaa;
+    border-top: 2px solid var(--color-border);
     padding: 18px 34px 50px;
-    background-color: #fffbed;
+    background-color: var(--color-page);
 }
 
 
@@ -222,9 +222,9 @@
 
 .review {
     min-height: 220px;
-    background-color: #d2b386;
+    background-color: var(--color-accent);
     padding: 20px 16px;
-    color: #174f45;
+    color: var(--color-text);
 }
 
 .review-user {
@@ -278,7 +278,7 @@
     .cafe-intro-text {
         margin: 0;
         border-left: none;
-        border-top: 2px solid #aaa;
+        border-top: 2px solid var(--color-border);
         padding: 25px 0 0;
     }
 
@@ -322,7 +322,7 @@
     .cafe-intro-text {
         margin: 0;
         border-left: none;
-        border-top: 2px solid #aaa;
+        border-top: 2px solid var(--color-border);
         padding: 25px 0 0;
     }
 

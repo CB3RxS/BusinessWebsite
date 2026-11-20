@@ -85,3 +85,60 @@ if (menuIcon && sidebar) {
     });
 
 }
+
+// =========================
+// LIGHT / DARK MODE
+// =========================
+
+const themeToggle = document.getElementById('theme-toggle');
+const themeIcon = document.querySelector('.theme-toggle-icon');
+const themeText = document.querySelector('.theme-toggle-text');
+
+// Apply the selected theme
+function applyTheme(theme) {
+    document.documentElement.dataset.theme = theme;
+
+    const isDark = theme === 'dark';
+
+    // Update the theme button
+    if (themeToggle && themeIcon && themeText) {
+        themeIcon.textContent = isDark ? '☀' : '☾';
+        themeText.textContent = isDark ? 'Light Mode' : 'Dark Mode';
+
+        themeToggle.setAttribute('aria-pressed', isDark);
+        themeToggle.setAttribute(
+            'aria-label',
+            isDark ? 'Switch to light mode' : 'Switch to dark mode'
+        );
+    }
+}
+
+// Load the saved theme when the page opens
+let savedTheme = 'light';
+
+try {
+    savedTheme = localStorage.getItem('perkup-theme') || 'light';
+} catch (error) {
+    // Use light mode if browser storage is unavailable
+}
+
+applyTheme(savedTheme);
+
+// Toggle between light and dark mode
+if (themeToggle) {
+    themeToggle.addEventListener('click', () => {
+        const currentTheme =
+            document.documentElement.dataset.theme || 'light';
+
+        const newTheme = currentTheme === 'light' ? 'dark' : 'light';
+
+        applyTheme(newTheme);
+
+        // Remember the selected theme
+        try {
+            localStorage.setItem('perkup-theme', newTheme);
+        } catch (error) {
+            // Theme still works even if browser storage is unavailable
+        }
+    });
+}

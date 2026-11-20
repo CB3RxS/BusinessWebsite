@@ -5,13 +5,13 @@
 
 .gallery-section {
     padding: 58px 34px 50px;
-    background-color: #fffbed;
+    background-color: var(--color-page);
 }
 
 .gallery-section h2 {
     font-size: 27px;
     margin-bottom: 24px;
-    color: #174f45;
+    color: var(--color-text);
 }
 
 
@@ -27,7 +27,7 @@
 /* Gallery Cards */
 
 .gallery-card {
-    background-color: #d2b386;
+    background-color: var(--color-accent);
     border-radius: 4px;
     overflow: hidden;
     display: flex;
@@ -42,7 +42,7 @@
     height: 220px;
     object-fit: cover;
     display: block;
-    background-color: #c4b398;
+    background-color: var(--color-sidebar);
     transition: transform 0.3s ease;
 }
 
@@ -55,14 +55,14 @@
 
 .gallery-card figcaption {
     padding: 16px;
-    color: #174f45;
+    color: var(--color-text);
     flex-grow: 1;
 }
 
 .gallery-card h3 {
     font-size: 18px;
     margin-bottom: 6px;
-    color: #174f45;
+    color: var(--color-text);
 }
 
 .gallery-card p {

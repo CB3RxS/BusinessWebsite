@@ -11,7 +11,7 @@
     margin-left: 69px;
     padding-top: 100px;
     padding-bottom: 30px;
-    background-color: #fffbed;
+    background-color: var(--color-page);
     min-height: 100vh;
 }
 
@@ -82,7 +82,7 @@
 .contact-form {
     min-height: 750px;
     padding: 45px 50px;
-    background-color: #edd9ad;
+    background-color: var(--color-panel);
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -112,7 +112,7 @@
 .form-group label {
     font-size: 14px;
     font-weight: bold;
-    color: #174f45;
+    color: var(--color-text);
     margin-bottom: 6px;
 }
 
@@ -126,7 +126,7 @@ fieldset.form-group {
 .form-group legend {
     font-size: 14px;
     font-weight: bold;
-    color: #174f45;
+    color: var(--color-text);
     margin-bottom: 6px;
     padding: 0;
 }
@@ -143,8 +143,8 @@ fieldset.form-group {
     padding: 10px;
     font-family: Arial, sans-serif;
     font-size: 14px;
-    background-color: #fffbed;
-    color: #174f45;
+    background-color: var(--color-page);
+    color: var(--color-text);
     outline: none;
 }
 
@@ -169,7 +169,7 @@ fieldset.form-group {
 .form-group input:focus,
 .form-group select:focus,
 .form-group textarea:focus {
-    outline: 2px solid #174f45;
+    outline: 2px solid var(--color-text);
 }
 
 
@@ -190,14 +190,14 @@ fieldset.form-group {
     gap: 6px;
     font-size: 14px;
     font-weight: normal;
-    color: #174f45;
+    color: var(--color-text);
     margin: 0;
 }
 
 .radio-options input,
 .checkbox-options input {
     width: auto;
-    accent-color: #174f45;
+    accent-color: var(--color-text);
 }
 
 /* Validation messages */
@@ -219,7 +219,7 @@ fieldset.form-group {
 .form-success {
     margin-top: 15px;
     padding: 12px;
-    background-color: #174f45;
+    background-color: var(--color-text);
     color: white;
     font-size: 14px;
 }
@@ -249,8 +249,8 @@ fieldset.form-group {
 }
 
 .form-buttons button[type="reset"] {
-    background-color: #c4b398;
-    color: #174f45;
+    background-color: var(--color-sidebar);
+    color: var(--color-text);
 }
 
 .form-buttons button:hover {
@@ -275,7 +275,7 @@ fieldset.form-group {
     align-items: center;
     justify-content: center;
     text-decoration: none;
-    background-color: #174f45;
+    background-color: var(--color-text);
     border-radius: 50%;
     transition: transform 0.2s ease, opacity 0.2s ease;
 }
@@ -298,12 +298,12 @@ fieldset.form-group {
 
 .cafe-info {
     min-height: 500px;
-    background-color: #edd9ad;
+    background-color: var(--color-panel);
     padding: 60px 50px;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    color: #174f45;
+    color: var(--color-text);
 }
 
 .cafe-info h2 {
@@ -328,7 +328,7 @@ fieldset.form-group {
 }
 
 .cafe-detail a {
-    color: #174f45;
+    color: var(--color-text);
     text-decoration: none;
     font-size: 16px;
     line-height: 1.5;

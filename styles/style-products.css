@@ -9,13 +9,13 @@
 
 .must-try {
     padding: 58px 34px 22px;
-    background-color: #fffbed;
+    background-color: var(--color-page);
 }
 
 .must-try h2 {
     font-size: 27px;
     margin-bottom: 18px;
-    color: #174f45;
+    color: var(--color-text);
     display: flex;
     align-items: center;
     gap: 18px;
@@ -27,7 +27,7 @@
     width: 30%;
     background: linear-gradient(
         to right,
-        #174f45,
+        var(--color-text),
         rgba(23, 79, 69, 0)
     );
 }
@@ -52,7 +52,7 @@
     height: 400px;
     object-fit: cover;
     display: block;
-    background-color: #d2b386;
+    background-color: var(--color-accent);
     transition:
         transform 0.35s ease,
         filter 0.35s ease;
@@ -74,7 +74,7 @@
 .product h3 {
     font-size: 20px;
     margin-top: 6px;
-    color: #174f45;
+    color: var(--color-text);
 }
 
 .product-desc {
@@ -94,15 +94,15 @@
    ========================= */
 
 .menu-tables-section {
-    border-top: 2px solid #aaa;
+    border-top: 2px solid var(--color-border);
     padding: 38px 34px 50px;
-    background-color: #fffbed;
+    background-color: var(--color-page);
 }
 
 .menu-tables-section h2 {
     font-size: 27px;
     margin-bottom: 24px;
-    color: #174f45;
+    color: var(--color-text);
 }
 
 
@@ -121,7 +121,7 @@
 }
 
 .menu-category {
-    background-color: #d2b386;
+    background-color: var(--color-accent);
     padding: 20px;
     border-radius: 4px;
     min-width: 0;
@@ -130,15 +130,15 @@
 
 .menu-category h3 {
     font-size: 20px;
-    color: #174f45;
+    color: var(--color-text);
     margin-bottom: 12px;
-    border-bottom: 1px solid #174f45;
+    border-bottom: 1px solid var(--color-text);
     padding-bottom: 4px;
 }
 
 .menu-subtext {
     font-size: 13px;
-    color: #174f45;
+    color: var(--color-text);
     margin-bottom: 10px;
     font-style: italic;
 }
@@ -161,8 +161,8 @@
     font-family: inherit;
     font-size: 14px;
     font-weight: bold;
-    background-color: #d2b386;
-    color: #174f45;
+    background-color: var(--color-accent);
+    color: var(--color-text);
     cursor: pointer;
     transition: background-color 0.2s ease, color 0.2s ease;
 }
@@ -173,12 +173,12 @@
 
 /* The currently selected button */
 .filter-btn.active {
-    background-color: #174f45;
+    background-color: var(--color-text);
     color: white;
 }
 
 .filter-btn:focus-visible {
-    outline: 3px solid #174f45;
+    outline: 3px solid var(--color-text);
     outline-offset: 2px;
 }
 
@@ -213,7 +213,7 @@
     text-align: left;
     padding: 8px 6px;
     font-size: 15px;
-    color: #174f45;
+    color: var(--color-text);
 }
 
 .menu-table th {
@@ -241,15 +241,15 @@
    ========================= */
 
 .menu-image-text {
-    border-top: 2px solid #aaa;
+    border-top: 2px solid var(--color-border);
     padding: 38px 34px 50px;
-    background-color: #fffbed;
+    background-color: var(--color-page);
 }
 
 .menu-image-text h2 {
     font-size: 27px;
     margin-bottom: 18px;
-    color: #174f45;
+    color: var(--color-text);
     display: flex;
     align-items: center;
     gap: 18px;
@@ -261,7 +261,7 @@
     width: 30%;
     background: linear-gradient(
         to right,
-        #174f45,
+        var(--color-text),
         rgba(23, 79, 69, 0)
     );
 }
