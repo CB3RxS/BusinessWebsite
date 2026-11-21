@@ -61,6 +61,14 @@
     margin-bottom: 15px;
 }
 
+/* Call-to-action buttons under the intro */
+.cta-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 20px;
+}
+
 
 /* =========================
    CAFE INFO BOX
@@ -364,6 +372,11 @@
     .cafe-intro-text p {
         font-size: 15px;
         line-height: 1.6;
+    }
+
+    /* Buttons fill the width on small screens */
+    .cta-buttons .btn {
+        flex: 1 1 100%;
     }
 
     .cafe-info-box {
