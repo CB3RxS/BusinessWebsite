@@ -34,8 +34,8 @@ A responsive, multi-page website for **Perk Up Cafe**, a coffee shop at Robinson
 | Mobile menu | `script.js` | The hamburger button opens and closes a sliding sidebar. It closes on an outside click, a link click, or the Escape key, and updates `aria-expanded` for screen readers. |
 | Light / dark mode | `script.js` | Toggles a theme and remembers the choice in `localStorage` (key `perkup-theme`). |
 | Menu filter | `products.js` | Buttons (All, Coffee, Non-Coffee, Smoothies, Juice) show or hide menu categories. The active button is marked with `aria-pressed`. |
-| Form validation | `contact.js` | Checks name, email, phone (optional, format 09XXXXXXXXX), date (optional, not in the past), age (optional, 1 to 120), time (optional, within opening hours), subject, and message. Shows an error under each field and a demo-only confirmation when everything is valid. |
-| Card reveal (bonus) | `about.js` | Mission, Vision, and Values cards reveal their text on hover or keyboard focus. |
+| Form validation | `contact.js` | Checks name, email, phone (optional, format 09XXXXXXXXX), age (optional, 1 to 120), subject, and message. Shows an error under each field and a demo-only confirmation when everything is valid. |
+| Card reveal (bonus) | `about.js` | Mission, Vision, and Values cards reveal their text on hover. |
 
 ## Design
 
