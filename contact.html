@@ -69,9 +69,9 @@
 
             <!-- Top Right - Contact Form -->
             <div class="contact-form">
+                <p class="form-note">Demo only: this form checks the input but does not send anything to the cafe.</p>
                 <form id = "contact-form" novalidate>
                     <div class="form-row">
-
                         <div class="form-group">
                             <label for="full-name">Full Name</label>
                             <input type="text" id="full-name" name="full-name" placeholder="Enter your full name" required>
@@ -121,52 +121,9 @@
                         <span class="error-message"></span> 
                     </div>
 
-                    <fieldset class="form-group">
-                        <legend>If you're posting a Review, would you like to display it on the Website?</legend>
-
-                        <div class="radio-options">
-                            <label>
-                                <input type="radio" name="reviewpost" value="Yes">
-                                Yes
-                            </label>
-
-                            <label>
-                                <input type="radio" name="reviewpost" value="No">
-                                No
-                            </label>
-                        </div>
-                    </fieldset>       
-
-                    <div class="form-group">
-                        <label>If you're posting a Review, display the following?</label>
-
-                        <div class="checkbox-options">
-                            <label>
-                                <input type="checkbox" name="display-details" value="Email">
-                                Email
-                            </label>
-
-                            <label>
-                                <input type="checkbox" name="display-details" value="Phone Number">
-                                Phone Number
-                            </label>
-
-                            <label>
-                                <input type="checkbox" name="display-details" value="Age">
-                                Age
-                            </label>
-
-                            <label>
-                                <input type="checkbox" name="display-details" value="Time Posted">
-                                Time Posted
-                            </label>
-                        </div>
-                    </div>
-
                     <div class="form-group">
                         <label for="message">Message</label>
-                        <textarea id="message" name="message" rows="5" placeholder="Write your message here...">
-                        </textarea>
+                        <textarea id="message" name="message" rows="5" placeholder="Write your message here..."></textarea>
                         <span class="error-message"></span> 
                     </div>
                     <div class="form-group">
@@ -182,11 +139,13 @@
 
                 <!-- Facebook -->
                 <div class="facebook-link">
-                    <a href="https://www.facebook.com/p/Perk-Up-Cafe-Robinsons-Place-Jaro-61558440020458/" target="_blank" rel="noopener noreferrer" aria-label="Perk Up Cafe on Facebook">
-
+                        <a href="https://www.facebook.com/p/Perk-Up-Cafe-Robinsons-Place-Jaro-61558440020458/" target="_blank" rel="noopener noreferrer">
+                        
                         <svg viewBox="0 0 24 24" aria-hidden="true">
                             <path d="M14 8h3V4h-3c-3.3 0-5 1.7-5 5v3H6v4h3v8h4v-8h3l1-4h-4V9c0-.7.3-1 1-1z"/>
                         </svg>
+    
+                        <span>Message us on Facebook</span>
                     </a>
                 </div>
             </div>
