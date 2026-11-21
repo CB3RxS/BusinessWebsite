@@ -50,7 +50,7 @@
     padding-left: 30px;
 }
 
-.cafe-intro-text h2 {
+.cafe-intro-text h1 {
     font-size: 32px;
     margin-bottom: 20px;
 }
@@ -356,7 +356,7 @@
         height: 240px;
     }
 
-    .cafe-intro-text h2 {
+    .cafe-intro-text h1 {
         font-size: 25px;
         margin-bottom: 12px;
     }
